@@ -1,11 +1,5 @@
-header {
-    font-family:'Inter', Courier, monospace;
-}
-
-.container {
-    max-width: 1320px;
-    margin: 0 auto;
-    padding: 0px 20px;
+.header {
+    font-family: "Inter", serif;
 }
 
 .header-width-gray {
@@ -27,17 +21,6 @@ header {
     align-items: center;
 }
 
-.left-block {
-    display: flex;
-    margin-right: 10px;
-}
-
-.right-block {
-    display: flex;
-    align-items: center;
-    margin-left: 10px;
-}
-
 .header-navigation {
     display: flex;
     align-items: center;
@@ -52,11 +35,6 @@ header {
 
 .header-navigation-item:last-child {
     margin-right: 0px;
-}
-
-.company-logo {
-    width: 61px;
-    height: 40px;
 }
 
 .header__phone {
@@ -75,7 +53,7 @@ header {
 .header__basket-button {
     border: 1px #F0BA4E solid;
     border-radius: 50px;
-    background-color:#4B565E;
+    background-color: #4B565E;
     width: 126px;
     height: 48px;
     display: flex;
@@ -176,4 +154,25 @@ header {
     line-height: 14px;
     color: #F9FAFB;
     margin-left: 4px;
+}
+
+.left-block {
+    display: flex;
+    margin-right: 10px;
+}
+
+.right-block {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.company-logo {
+    width: 61px;
+    height: 40px;
+}
+
+.container {
+    max-width: 1320px;
+    margin: 0 auto;
 }
