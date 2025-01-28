@@ -171,3 +171,19 @@
     max-width: 1320px;
     margin: 0 auto;
 }
+
+.button-styles {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: dimgray;
+    color: white;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button-styles:hover {
+    background-color: #4B565E;
+    transform: scale(1.1);
+}

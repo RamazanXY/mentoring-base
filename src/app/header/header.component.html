@@ -6,9 +6,11 @@
                     <img style="margin-right: 20px;" class="company-logo" src="./assets/img/company-logo.svg"
                         alt="company-logo">
                     <nav class="header-navigation">
-                        <div class="header-navigation-item header--styles-text">Главная</div>
-                        <div class="header-navigation-item header--styles-text">О компании</div>
-                        <div class="header-navigation-item header--styles-text">Каталог</div>
+                        <div class="header-navigation-item header--styles-text">{{headerItem1}}</div>
+                        <div *ngIf="isShowCatalog" class="header-navigation-item header--styles-text">{{aboutCompany}}</div>
+                        <div class="header-navigation-item header--styles-text">{{headerItem2}}</div>
+                        <button (click)="isShowCatalog=!isShowCatalog" class="button-styles">Скрыть/Показать каталог</button>
+                        <button (click)="ChangeMenuText()" class="button-styles">Изменить текст</button>
                     </nav>
                 </div>
                 <div class="right-block">
@@ -36,11 +38,8 @@
                         <img src="./assets/img/light-logo.svg" alt="ligth logo">
                     </div>
                     <nav class="header__menu-nav">
-                        <span class="header__menu-nav-item header__menu-nav--item-left">Каталог</span>
-                        <span class="header__menu-nav-item">Стройматериалы</span>
-                        <span class="header__menu-nav-item">Инструменты</span>
-                        <span class="header__menu-nav-item">Электрика</span>
-                        <span class="header__menu-nav-item">Интерьер и одежда</span>
+                        <span *ngFor="let item of menuItems"
+                            class="header__menu-nav-item header__menu-nav--item-left">{{item}}</span>
                     </nav>
                 </div>
                 <div class="right-block">

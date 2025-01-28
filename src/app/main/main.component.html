@@ -1,4 +1,5 @@
-<div class="background-large">
+<button (click)="isShowImg=!isShowImg" class="button-styles">Скрыть/Показать картинку</button>
+<div *ngIf="isShowImg" class="background-large">
     <img style="max-width: 1920px;" src="./assets/img/banner.png" alt="man banner">
 </div>
 <div class="advantages container">
@@ -27,11 +28,7 @@
         </div>
     </div>
     <div class="advantages-assortment__pagination">
-        <button class="advantages-assortment__pagination-button active--button" type="button">1</button>
-        <button class="advantages-assortment__pagination-button" type="button">2</button>
-        <button class="advantages-assortment__pagination-button" type="button">3</button>
-        <button class="advantages-assortment__pagination-button" type="button">4</button>
-        <button class="advantages-assortment__pagination-button" type="button">5</button>
+        <button *ngFor="let item of newPages" class="advantages-assortment__pagination-button active--button" type="button">{{item}}</button>
     </div>
 </div>
 <div class="grid-card container">

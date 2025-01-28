@@ -355,6 +355,21 @@
     top: 50px;
 }
 
+.button-styles {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: dimgray;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.4s ease, transform 0.3s ease;
+}
+
+.button-styles:hover {
+    background-color: #4B565E;
+    transform: scale(1.1);
+}
+
 .gray--text {
     color: #A1A0A0;
 }
