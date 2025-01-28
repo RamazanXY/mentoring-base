@@ -167,6 +167,13 @@
     align-self: flex-end;
 }
 
+.link--start-position {
+    align-self: flex-start;
+}
+
+.text--end-position {
+    align-self: flex-end;
+}
 
 .grig-card__item-catalog-text {
     font-size: 14px;
@@ -188,10 +195,6 @@
     width: 386px;
     height: 386px;
     object-fit: cover;
-}
-
-.products {
-    font-family: Inter;
 }
 
 .products-header {
@@ -339,10 +342,21 @@
     outline: none;
 }
 
-.styles-link-text__position {
+.styles-link-text--position {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+}
+
+.sales--logo {
+    z-index: 1;
+    position: relative;
+    left: -149px;
+    top: 50px;
+}
+
+.gray--text {
+    color: #A1A0A0;
 }
 
 .clear-styles-button {
