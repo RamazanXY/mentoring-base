@@ -3,12 +3,13 @@
         <div class="container">
             <div class="header__upper">
                 <div class="left-block">
+                    <button routerLink="/users" class="button-styles-users">Пользователи</button>
                     <img style="margin-right: 20px;" class="company-logo" src="./assets/img/company-logo.svg"
                         alt="company-logo">
                     <nav class="header-navigation">
-                        <div class="header-navigation-item header--styles-text">{{headerItem1}}</div>
-                        <div *ngIf="isShowCatalog" class="header-navigation-item header--styles-text">{{aboutCompany}}</div>
-                        <div class="header-navigation-item header--styles-text">{{headerItem2}}</div>
+                        <div routerLink="" class="header-navigation-item">{{headerItem1}}</div>
+                        <div *ngIf="isShowCatalog" class="header-navigation-item">{{aboutCompany}}</div>
+                        <div class="header-navigation-item">{{headerItem2}}</div>
                         <button (click)="isShowCatalog=!isShowCatalog" class="button-styles">Скрыть/Показать каталог</button>
                         <button (click)="ChangeMenuText()" class="button-styles">Изменить текст</button>
                     </nav>
@@ -44,7 +45,7 @@
                 </div>
                 <div class="right-block">
                     <div class="header__input-search">
-                        <input class="header__input-search-item header--styles-text" type="search"
+                        <input class="header__input-search-item" type="search"
                             placeholder="Поиск, например Круг зачистной">
                         <button class="header__input-search-button" type="button">
                             <img class="header__input-search-button-logo" src="./assets/img/magnifier.svg" alt="search">

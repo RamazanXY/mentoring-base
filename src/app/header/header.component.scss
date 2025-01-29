@@ -26,6 +26,7 @@
     font-weight: 600;
     margin-right: 24px;
     color: #F9FAFB;
+    cursor: pointer;
 }
 
 .header-navigation-item:last-child {
@@ -83,6 +84,7 @@
 
 .header__menu-nav-item {
     margin-left: 24px;
+    cursor: pointer;
 }
 
 .header__menu-nav--item-left {
@@ -173,17 +175,28 @@
 }
 
 .button-styles {
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
+    padding: 10px;
+    font-size: 15px;
+    border: 1px solid #F0BA4E;
     background-color: dimgray;
     color: white;
-    border-radius: 50px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .button-styles:hover {
-    background-color: #4B565E;
+    background-color: #F0BA4E;
     transform: scale(1.1);
+}
+
+.button-styles-users {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #F0BA4E;
+    background: none;
+    color: white;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-right: 10px;
 }

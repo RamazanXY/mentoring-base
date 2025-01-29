@@ -1,12 +1,13 @@
 import { NgFor, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 const aboutCompanyFn = (text: string) => text;
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [NgFor, NgIf],
+  imports: [NgFor, NgIf, RouterLink],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
