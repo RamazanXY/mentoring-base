@@ -3,15 +3,16 @@
         <div class="container">
             <div class="header__upper">
                 <div class="left-block">
-                    <button routerLink="/users" class="button-styles-users">Пользователи</button>
+                    <button routerLink="/users" class="button-styles-users" type="button">Пользователи</button>
                     <img style="margin-right: 20px;" class="company-logo" src="./assets/img/company-logo.svg"
                         alt="company-logo">
                     <nav class="header-navigation">
                         <div routerLink="" class="header-navigation-item">{{headerItem1}}</div>
                         <div *ngIf="isShowCatalog" class="header-navigation-item">{{aboutCompany}}</div>
                         <div class="header-navigation-item">{{headerItem2}}</div>
-                        <button (click)="isShowCatalog=!isShowCatalog" class="button-styles">Скрыть/Показать каталог</button>
-                        <button (click)="ChangeMenuText()" class="button-styles">Изменить текст</button>
+                        <button (click)="isShowCatalog=!isShowCatalog" class="button-styles"
+                            type="button">Скрыть/Показать каталог</button>
+                        <button (click)="ChangeMenuText()" class="button-styles" type="button">Изменить текст</button>
                     </nav>
                 </div>
                 <div class="right-block">
