@@ -21,7 +21,6 @@ export class UsersListComponent {
         this.usersApiService.getUsers().subscribe(
             (response: any) => {
                 this.users = response;
-                console.log('USERS:', this.users)
             }
         )
     }

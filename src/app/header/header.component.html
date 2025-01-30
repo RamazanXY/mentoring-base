@@ -8,11 +8,11 @@
                         alt="company-logo">
                     <nav class="header-navigation">
                         <div routerLink="" class="header-navigation-item">{{headerItem1}}</div>
-                        <div *ngIf="isShowCatalog" class="header-navigation-item">{{aboutCompany}}</div>
-                        <div class="header-navigation-item">{{headerItem2}}</div>
+                        <div class="header-navigation-item">{{aboutCompany}}</div>
+                        <div *ngIf="isShowCatalog" class="header-navigation-item">{{headerItem2}}</div>
                         <button (click)="isShowCatalog=!isShowCatalog" class="button-styles"
                             type="button">Скрыть/Показать каталог</button>
-                        <button (click)="ChangeMenuText()" class="button-styles" type="button">Изменить текст</button>
+                        <button (click)="ChangeMenuText()" class="button-styles" type="button">Изменить регистр</button>
                     </nav>
                 </div>
                 <div class="right-block">
