@@ -1,4 +1,4 @@
-export interface TodosInterface {
+export interface Todos {
     userId: number,
     id: number,
     title: string,
