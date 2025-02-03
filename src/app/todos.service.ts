@@ -22,9 +22,19 @@ export class TodosService {
     }
 
     createTodo(todo: Todos) {
+       const existingTodo = this.todosSubject$.value.find(
+        item => item.userId === todo.userId
+       )
+
+       if(existingTodo) {
+        alert('ТАКОЙ USER ID УЖЕ ЗАРЕГИСТРИРОВАН!');
+       }
+       else {
         this.todosSubject$.next(
             [...this.todosSubject$.value, todo]
-        )
+        );
+        alert('НОВАЯ ЗАДАЧА ЗАРЕГИСТРИРОВАНА!');
+       }
     }
 
     deleteTodo(id: number) {

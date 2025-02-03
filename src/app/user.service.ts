@@ -21,9 +21,19 @@ export class UserService {
     }
 
     createUser(user: Users) {
-        this.usersSubject$.next(
-            [...this.usersSubject$.value, user]
+        const existingUser = this.usersSubject$.value.find(
+            item => item.email === user.email
         )
+
+        if (existingUser) {
+            alert('ТАКОЙ ЭМАЙЛ УЖЕ ЗАРЕГИСТРИРОВАН!');
+        }
+        else {
+            this.usersSubject$.next(
+                [...this.usersSubject$.value, user]
+            );
+            alert('НОВЫЙ ПОЛЬЗОВАТЕЛЬ ЗАРЕГИСТРИРОВАН!');
+        }
     }
 
     deleteUser(id: number) {
