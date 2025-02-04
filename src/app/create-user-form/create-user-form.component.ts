@@ -1,11 +1,14 @@
-import { NgIf } from "@angular/common";
 import { Component, EventEmitter, Output } from "@angular/core";
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from "@angular/forms";
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
+import { MatIconModule } from '@angular/material/icon';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 @Component({
     selector: 'app-create-user-form',
     standalone: true,
-    imports: [ReactiveFormsModule, NgIf],
+    imports: [ReactiveFormsModule, MatIconModule, MatButtonModule, MatInputModule, MatFormFieldModule],
     templateUrl: './create-user-form.component.html',
     styleUrl: './create-user-form.component.scss'
 })

@@ -27,13 +27,12 @@ export class TodosService {
        )
 
        if(existingTodo) {
-        alert('ТАКОЙ USER ID УЖЕ ЗАРЕГИСТРИРОВАН!');
+        return undefined;
        }
        else {
         this.todosSubject$.next(
             [...this.todosSubject$.value, todo]
         );
-        alert('НОВАЯ ЗАДАЧА ЗАРЕГИСТРИРОВАНА!');
        }
     }
 

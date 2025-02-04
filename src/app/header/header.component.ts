@@ -13,7 +13,7 @@ const aboutCompanyFn = (text: string) => text;
 })
 export class HeaderComponent {
 
-  isShowCatalog: boolean = true;
+  isShowCatalog: boolean = false;
 
   readonly headerItem1 = 'Главная';
   readonly aboutCompany = aboutCompanyFn('О компании');

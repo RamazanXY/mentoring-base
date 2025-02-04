@@ -26,13 +26,12 @@ export class UserService {
         )
 
         if (existingUser) {
-            alert('ТАКОЙ ЭМАЙЛ УЖЕ ЗАРЕГИСТРИРОВАН!');
+            return undefined;
         }
         else {
             this.usersSubject$.next(
                 [...this.usersSubject$.value, user]
             );
-            alert('НОВЫЙ ПОЛЬЗОВАТЕЛЬ ЗАРЕГИСТРИРОВАН!');
         }
     }
 
