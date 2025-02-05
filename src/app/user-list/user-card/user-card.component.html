@@ -4,4 +4,6 @@
     <p>{{user.website}}</p>
     <p>{{user.company.name}}</p>
     <button (click)="onDeleteUser(user.id)" type="button">УДАЛИТЬ ПОЛЬЗЕВАТЕЛЯ</button>
+    <button (click)="editOpenDialog()" type="submit">РЕДАКТИРОВАТЬ ПОЛЬЗЕВАТЕЛЯ</button>
+    <button (click)="createOpenDialog()" type="submit">Добавить пользователя</button>
 </div>
