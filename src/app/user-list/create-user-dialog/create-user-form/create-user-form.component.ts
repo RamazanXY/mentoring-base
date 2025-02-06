@@ -1,21 +1,23 @@
-import { Component, EventEmitter, Output } from "@angular/core";
+import { Component, inject } from "@angular/core";
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from "@angular/forms";
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MAT_DIALOG_DATA, MatDialogClose } from "@angular/material/dialog";
+import { Users } from "../../../users";
+import { MatSnackBar } from "@angular/material/snack-bar";
 
 @Component({
     selector: 'app-create-user-form',
     standalone: true,
-    imports: [ReactiveFormsModule, MatIconModule, MatButtonModule, MatInputModule, MatFormFieldModule],
+    imports: [ReactiveFormsModule, MatIconModule, MatButtonModule, MatInputModule, MatFormFieldModule, MatDialogClose],
     templateUrl: './create-user-form.component.html',
     styleUrl: './create-user-form.component.scss'
 })
 
 export class CreateUserForm {
-    @Output()
-    CreateUser = new EventEmitter();
+    readonly data = inject<{ user: Users }>(MAT_DIALOG_DATA);
 
     public form = new FormGroup({
         name: new FormControl('',
@@ -28,8 +30,9 @@ export class CreateUserForm {
             [Validators.required, Validators.minLength(2)])
     });
 
-    public SubmitForm(): void {
-        this.CreateUser.emit(this.form.value);
-        this.form.reset();
+    get userWithCreateFields() {
+        return {
+            ...this.form.value,
+        }
     }
 }

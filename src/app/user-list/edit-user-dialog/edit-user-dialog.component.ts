@@ -17,7 +17,7 @@ import { Users } from '../../users';
 })
 
 export class EditUserDialogComponent {
-    readonly data = inject<{user: Users}>(MAT_DIALOG_DATA);
+readonly data = inject<{user: Users}>(MAT_DIALOG_DATA);
 
     public form = new FormGroup({
         name: new FormControl(this.data.user?.name || '',

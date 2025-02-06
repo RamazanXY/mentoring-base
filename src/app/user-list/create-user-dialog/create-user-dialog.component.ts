@@ -1,38 +1,38 @@
-import { Component, inject } from "@angular/core";
-import { FormControl, FormGroup, ReactiveFormsModule, Validators } from "@angular/forms";
+import { Component, EventEmitter, inject, Input, Output } from "@angular/core";
+import { ReactiveFormsModule } from "@angular/forms";
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { Users } from "../../users";
-import { MAT_DIALOG_DATA, MatDialogClose } from "@angular/material/dialog";
+import { MatDialog } from "@angular/material/dialog";
+import { CreateUserForm } from "./create-user-form/create-user-form.component";
 
 @Component({
     selector: 'app-create-user-dialog',
     standalone: true,
-    imports: [ReactiveFormsModule, MatIconModule, MatButtonModule, MatInputModule, MatFormFieldModule, MatDialogClose],
+    imports: [ReactiveFormsModule, MatIconModule, MatButtonModule, MatInputModule, MatFormFieldModule],
     templateUrl: './create-user-dialog.component.html',
     styleUrl: './create-user-dialog.component.scss'
 })
 
 export class CreateUserDialog {
-    readonly data = inject<{ user: Users }>(MAT_DIALOG_DATA);
+    @Input()
+    user: any;
 
-    public form = new FormGroup({
-        name: new FormControl('',
-            [Validators.required, Validators.minLength(2)]),
-        email: new FormControl('',
-            [Validators.required, Validators.email]),
-        website: new FormControl('',
-            [Validators.required, Validators.minLength(3)]),
-        companyName: new FormControl('',
-            [Validators.required, Validators.minLength(2)])
-    });
+    @Output()
+    createUser = new EventEmitter();
 
-    get userWithCreateFields() {
-        return {
-            ...this.form.value,
-            id: this.data.user.id
-        }
-    }
+    readonly dialog = inject(MatDialog);
+
+    createOpenDialog(): void {
+        const dialogRef = this.dialog.open(CreateUserForm, {
+            data: { user: this.user },
+        });
+
+        dialogRef.afterClosed().subscribe(createResult => {
+            if (createResult) {
+                this.createUser.emit(createResult);
+            }
+        })
+    };
 }

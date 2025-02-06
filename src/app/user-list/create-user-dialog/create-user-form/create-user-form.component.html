@@ -1,30 +1,30 @@
-<div class="edit">
-    <h1 class="edit-title">EDIT USER FORM</h1>
-    <div class="edit-user">
+<div class="create">
+    <h1 class="create-title">CREATE USER FORM</h1>
+    <div class="create-user">
         <form class="form" [formGroup]="form">
-            <mat-form-field class="edit-user-form">
+            <mat-form-field class="create-user-form">
                 <mat-label>Введите имя пользователя</mat-label>
-                <input matInput formControlName="name" placeholder="name">
+                <input matInput formControlName="name">
                 <mat-error>Некорректное название</mat-error>
             </mat-form-field>
-            <mat-form-field class="edit-user-form">
+            <mat-form-field class="create-user-form">
                 <mat-label>Введите email</mat-label>
-                <input matInput formControlName="email" placeholder="email">
+                <input matInput formControlName="email">
                 <mat-error>Некорректное название</mat-error>
             </mat-form-field>
-            <mat-form-field class="edit-user-form">
+            <mat-form-field class="create-user-form">
                 <mat-label>Введите website</mat-label>
-                <input matInput formControlName="website" placeholder="website">
+                <input matInput formControlName="website">
                 <mat-error>Некорректное название</mat-error>
             </mat-form-field>
-            <mat-form-field class="edit-user-form">
+            <mat-form-field class="create-user-form">
                 <mat-label>Введите company</mat-label>
-                <input matInput formControlName="companyName" placeholder="company name">
+                <input matInput formControlName="companyName">
                 <mat-error>Некорректное название</mat-error>
             </mat-form-field>
-            <button class="edit-user-form" matIconSuffix mat-raised-button type="submit" [disabled]="form.invalid"
-                [mat-dialog-close]="userWithUpdateFields">
-                Edit user
+            <button class="create-user-form" matIconSuffix mat-raised-button type="submit" [disabled]="form.invalid"
+                [mat-dialog-close]="userWithCreateFields">
+                Add user
                 <mat-icon>add</mat-icon>
             </button>
         </form>

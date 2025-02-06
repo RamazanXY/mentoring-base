@@ -3,13 +3,14 @@ import { ChangeDetectionStrategy, Component, inject } from "@angular/core";
 import { UsersApiService } from "../users-api.service";
 import { UserCardComponent } from "./user-card/user-card.component";
 import { UserService } from "../user.service";
-import { CreateUserForm } from "../create-user-form/create-user-form.component";
+import { CreateUserDialog } from "./create-user-dialog/create-user-dialog.component";
+import { MatSnackBar } from "@angular/material/snack-bar";
 
 
 @Component({
     selector: 'app-users-list',
     standalone: true,
-    imports: [NgFor, UserCardComponent, AsyncPipe, CreateUserForm],
+    imports: [NgFor, UserCardComponent, AsyncPipe, CreateUserDialog],
     templateUrl: './user-list.component.html',
     styleUrl: './user-list.component.scss',
     changeDetection: ChangeDetectionStrategy.OnPush
@@ -27,6 +28,9 @@ export class UsersListComponent {
             }
         )
     }
+
+       private snackBar = inject(MatSnackBar);
+            
 
     deleteUser(id: number) {
         this.userService.deleteUser(id);
@@ -50,6 +54,8 @@ export class UsersListComponent {
             company: {
                 name: formDate.companyName
             },
+        }), this.snackBar.open('Пользователь создан!', 'ок', {
+            duration: 5000
         });
     }
 }

@@ -1,14 +1,12 @@
 <div class="container">
-    <div class="title-users-list">
-        <button (createUser)="createUser($event)">CreateUser</button>
-        <app-create-user-form (createUser)="createUser($event)"></app-create-user-form>
+    <div class="create-user">
+        <app-create-user-dialog (createUser)="createUser($event)"></app-create-user-dialog>
     </div>
     <div class="card">
         <div *ngFor="let item of userService.users$ | async">
             <app-user-card [user]="item"
             (deleteUser)="deleteUser($event)"
-            (editUser)="editUser($event)"
-            (createUser)="createUser($event)"></app-user-card>
+            (editUser)="editUser($event)"></app-user-card>
         </div>
     </div>
 </div>

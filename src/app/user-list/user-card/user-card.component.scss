@@ -1,8 +1,46 @@
-.card__item {
-    width: 200px;
-    height: 220px;
-    font-size: 16px;
-    border: 1px solid #F0BA4E;
-    box-shadow: 0px 20px 50px 0px #12112714;
-    padding: 15px;
+.card {
+  width: 300px;
+  margin: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s, box-shadow 0.2s;
+  font-family: 'Inter';
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+mat-card-header {
+  background-color: #5c676ec4;
+  color: white;
+  padding: 16px;
+}
+
+mat-card-title {
+  font-size: 1.5em;
+}
+
+mat-card-subtitle {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+mat-card-content {
+  padding: 16px;
+}
+
+mat-card-actions {
+  padding: 16px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.button-gray {
+  background-color: #5c676ec4;
+  color: white;
+}
+.button-red {
+  background-color: #ca0000bd;
+  color: white; 
 }
