@@ -23,11 +23,12 @@
                     </div>
                     <img class="header__love-logo" src="./assets/img/love-logo.svg" alt="love logo">
                     <div class="header__basket">
-                        <button class="header__basket-button" type="button">
+                        <button yellow class="header__basket-button" type="button">
                             <img class="header__basket-button-logo" src="./assets/img/basket-logo.svg"
                                 alt="basket logo">
                             <span class="header--styles-text">Пусто</span>
                         </button>
+                        <span class="header--styles-text">{{ today | date:'medium' }}</span>
                     </div>
                 </div>
             </div>

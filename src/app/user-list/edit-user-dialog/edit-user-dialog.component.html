@@ -22,8 +22,8 @@
                 <input matInput formControlName="companyName" placeholder="company name">
                 <mat-error>Некорректное название</mat-error>
             </mat-form-field>
-            <button class="edit-user-form" matIconSuffix mat-raised-button type="submit" [disabled]="form.invalid"
-                [mat-dialog-close]="userWithUpdateFields">
+            <button matTooltip="Редактировать данные пользователя" class="edit-user-form" matIconSuffix
+                mat-raised-button type="submit" [disabled]="form.invalid" [mat-dialog-close]="userWithUpdateFields">
                 Edit user
                 <mat-icon>add</mat-icon>
             </button>

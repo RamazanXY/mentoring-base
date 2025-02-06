@@ -30,17 +30,18 @@ mat-card-content {
 }
 
 mat-card-actions {
-  padding: 16px;
+  padding: 10px;
   display: flex;
-  justify-content: flex-end;
-  gap: 8px;
+  justify-content: center;
+  gap: 16px;
 }
 
 .button-gray {
   background-color: #5c676ec4;
   color: white;
 }
+
 .button-red {
   background-color: #ca0000bd;
-  color: white; 
+  color: white;
 }

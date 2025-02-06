@@ -3,7 +3,7 @@ import { ChangeDetectionStrategy, Component, inject } from "@angular/core";
 import { TodosApiService } from "../todos-api.service";
 import { TodoCardComponent } from "./todo-card/todo-card.component";
 import { TodosService } from "../todos.service";
-import { CreateTodoForm } from "../create-todo-form/create-todo-form.component";
+import { CreateTodoForm } from "./create-todo-form/create-todo-form.component";
 
 
 @Component({
