@@ -59,7 +59,7 @@ export class UserCardComponent {
             if (deleteResult) {
                 this.deleteUser.emit(this.user.id);
                 this._snackBar.open('Пользователь удален!', 'ок', {
-                    duration: 10000
+                    duration: 10000 
                 });
             }
         });
