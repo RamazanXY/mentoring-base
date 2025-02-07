@@ -5,8 +5,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MAT_DIALOG_DATA, MatDialogClose } from "@angular/material/dialog";
-import { Users } from "../../../users";
-import { MatSnackBar } from "@angular/material/snack-bar";
+import { Users } from '../../../interface/users'; 
 
 @Component({
     selector: 'app-create-user-form',

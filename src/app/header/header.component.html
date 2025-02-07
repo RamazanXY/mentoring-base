@@ -3,7 +3,11 @@
         <div class="container">
             <div class="header__upper">
                 <div class="left-block">
-                    <button routerLink="/users" class="button-styles-forms" type="button">Админка</button>
+                    <nav class="header-navigation-button">
+                        <button mat-raised-button (click)="openLoginDialog()">
+                            {{ userService.getCurrentUser() || 'Войти' }}
+                        </button>
+                    </nav>
                     <button routerLink="/todos" class="button-styles-forms" type="button">Задачки</button>
                     <img style="margin-right: 20px;" class="company-logo" src="./assets/img/company-logo.svg"
                         alt="company-logo">
@@ -12,7 +16,7 @@
                         <div class="header-navigation-item">{{aboutCompany}}</div>
                         <div *ngIf="isShowCatalog" class="header-navigation-item">{{headerItem2}}</div>
                         <button (click)="isShowCatalog=!isShowCatalog" class="button-styles"
-                            type="button">Скрыть/Показать каталог</button>
+                            type="button">Скрыть/Показать</button>
                         <button (click)="ChangeMenuText()" class="button-styles" type="button">Изменить регистр</button>
                     </nav>
                 </div>

@@ -362,7 +362,7 @@
     background-color: dimgray;
     color: white;
     cursor: pointer;
-    transition: background-color 0.4s ease, transform 0.3s ease;
+    position: absolute;
 }
 
 .button-styles:hover {

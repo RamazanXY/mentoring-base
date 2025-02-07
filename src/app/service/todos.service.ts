@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { Todos } from "./todos";
+import { Todos } from "../interface/todos";
 import { BehaviorSubject } from "rxjs";
 
 

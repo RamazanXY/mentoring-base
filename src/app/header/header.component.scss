@@ -22,6 +22,14 @@
     align-items: center;
 }
 
+.header-navigation-button {
+    padding: 16px;
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+}
+
+
 .header-navigation-item {
     font-weight: 600;
     margin-right: 24px;
@@ -181,7 +189,8 @@
     background-color: dimgray;
     color: white;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    border-radius: 40px;
+    height: 70px;
 }
 
 .button-styles:hover {
@@ -197,6 +206,6 @@
     color: white;
     border-radius: 50px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    height: 40px;
     margin-right: 10px;
 }

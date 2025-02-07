@@ -1,8 +1,8 @@
 import { AsyncPipe, NgFor } from "@angular/common";
 import { ChangeDetectionStrategy, Component, inject } from "@angular/core";
-import { UsersApiService } from "../users-api.service";
+import { UsersApiService } from "../service/users-api.service";
 import { UserCardComponent } from "./user-card/user-card.component";
-import { UserService } from "../user.service";
+import { UserService } from "../service/user.service";
 import { CreateUserDialog } from "./create-user-dialog/create-user-dialog.component";
 import { MatSnackBar } from "@angular/material/snack-bar";
 
@@ -17,9 +17,16 @@ import { MatSnackBar } from "@angular/material/snack-bar";
 })
 
 export class UsersListComponent {
+    hasUnsavedChanges() {
+      throw new Error('Method not implemented.');
+    }
     readonly usersApiService = inject(UsersApiService);
     readonly userService = inject(UserService)
+    private snackBar = inject(MatSnackBar);
+
     CreateUserForm: any;
+    
+    canExit = false;
 
     constructor() {
         this.usersApiService.getUsers().subscribe(
@@ -28,9 +35,6 @@ export class UsersListComponent {
             }
         )
     }
-
-       private snackBar = inject(MatSnackBar);
-            
 
     deleteUser(id: number) {
         this.userService.deleteUser(id);
@@ -45,6 +49,10 @@ export class UsersListComponent {
         });
     }
 
+    onClick() {
+        this.canExit = !this.canExit;
+    }
+
     public createUser(formDate: any): void {
         this.userService.createUser({
             id: new Date().getTime(),
@@ -54,6 +62,7 @@ export class UsersListComponent {
             company: {
                 name: formDate.companyName
             },
+            isAdmin: false
         }), this.snackBar.open('Пользователь создан!', 'ок', {
             duration: 5000
         });
