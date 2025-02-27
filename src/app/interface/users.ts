@@ -1,4 +1,4 @@
-export interface Users {
+export interface User {
     isAdmin: boolean;
     id: number;
     name: string;

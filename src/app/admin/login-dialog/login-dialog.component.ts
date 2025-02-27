@@ -3,6 +3,8 @@ import { MatDialogRef } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
 import { UserService } from '../../service/user.service';
 import { Router } from '@angular/router';
+import { Store } from '@ngrx/store';
+import { UserActions } from '../../user-list/store/user.actions';
 
 @Component({
   selector: 'app-login-dialog',
@@ -14,27 +16,24 @@ import { Router } from '@angular/router';
 export class LoginDialogComponent {
   constructor(
     private dialogRef: MatDialogRef<LoginDialogComponent>,
-    private userService: UserService,
+    private store: Store,
     private router: Router
-  ) {}
-
+  ) { };
 
   loginAsAdmin(): void {
-    this.userService.loginAsAdmin();
+    this.store.dispatch(UserActions.loginAsAdmin());
     this.dialogRef.close();
     this.router.navigate(['/admin']);
   }
 
-
   loginAsUser(): void {
-    this.userService.loginAsUser();
+    this.store.dispatch(UserActions.loginAsUser());
     this.dialogRef.close();
     this.router.navigate(['/users']);
   }
 
-
   logout(): void {
-    this.userService.logout();
+    this.store.dispatch(UserActions.logout());
     this.dialogRef.close();
     this.router.navigate(['/']);
   }

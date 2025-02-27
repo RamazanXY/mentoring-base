@@ -5,7 +5,7 @@
                 <div class="left-block">
                     <nav class="header-navigation-button">
                         <button mat-raised-button (click)="openLoginDialog()">
-                            {{ userService.getCurrentUser() || 'Войти' }}
+                            {{ (currentUser$ | async)?.name || 'Войти' }}
                         </button>
                     </nav>
                     <button routerLink="/todos" class="button-styles-forms" type="button">Задачки</button>
@@ -15,9 +15,8 @@
                         <div routerLink="" class="header-navigation-item">{{headerItem1}}</div>
                         <div class="header-navigation-item">{{aboutCompany}}</div>
                         <div *ngIf="isShowCatalog" class="header-navigation-item">{{headerItem2}}</div>
-                        <button (click)="isShowCatalog=!isShowCatalog" class="button-styles"
+                        <button (click)="isShowCatalog=!isShowCatalog" mat-raised-button class="button-styles"
                             type="button">Скрыть/Показать</button>
-                        <button (click)="ChangeMenuText()" class="button-styles" type="button">Изменить регистр</button>
                     </nav>
                 </div>
                 <div class="right-block">
@@ -26,13 +25,13 @@
                         <span class="header--styles-text">+7 (965) 084-29-29</span>
                     </div>
                     <img class="header__love-logo" src="./assets/img/love-logo.svg" alt="love logo">
+                    <span class="header--styles-text">{{ today | date:'medium' }}</span>
                     <div class="header__basket">
                         <button yellow class="header__basket-button" type="button">
                             <img class="header__basket-button-logo" src="./assets/img/basket-logo.svg"
                                 alt="basket logo">
                             <span class="header--styles-text">Пусто</span>
                         </button>
-                        <span class="header--styles-text">{{ today | date:'medium' }}</span>
                     </div>
                 </div>
             </div>
@@ -49,6 +48,8 @@
                         <span *ngFor="let item of menuItems"
                             class="header__menu-nav-item header__menu-nav--item-left">{{item}}</span>
                     </nav>
+                    <button (click)="ChangeMenuText()" mat-raised-button class="button-styles"
+                            type="button">Изменить регистр</button>
                 </div>
                 <div class="right-block">
                     <div class="header__input-search">

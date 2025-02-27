@@ -7,6 +7,6 @@ export class UsersApiService {
     readonly apiService = inject(HttpClient);
 
     getUsers() {
-        return this.apiService.get('https://jsonplaceholder.typicode.com/users')
+        return this.apiService.get('https://jsonplaceholder.typicode.com/users');
     }
 }

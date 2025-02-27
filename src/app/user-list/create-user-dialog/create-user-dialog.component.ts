@@ -6,6 +6,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDialog } from "@angular/material/dialog";
 import { CreateUserForm } from "./create-user-form/create-user-form.component";
+import { User } from "../../interface/users";
 
 @Component({
     selector: 'app-create-user-dialog',
@@ -17,7 +18,7 @@ import { CreateUserForm } from "./create-user-form/create-user-form.component";
 
 export class CreateUserDialog {
     @Input()
-    user: any;
+    user: User | undefined;
 
     @Output()
     createUser = new EventEmitter();
@@ -26,7 +27,7 @@ export class CreateUserDialog {
 
     createOpenDialog(): void {
         const dialogRef = this.dialog.open(CreateUserForm, {
-            data: { user: this.user },
+            data: { user: this.user }
         });
 
         dialogRef.afterClosed().subscribe(createResult => {

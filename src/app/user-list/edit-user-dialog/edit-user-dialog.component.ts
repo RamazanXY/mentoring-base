@@ -6,7 +6,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MAT_DIALOG_DATA, MatDialogClose } from '@angular/material/dialog';
-import { Users } from '../../interface/users'; 
+import { User } from '../../interface/users';
 
 @Component({
     selector: 'app-edit-user-dialog',
@@ -18,7 +18,7 @@ import { Users } from '../../interface/users';
 })
 
 export class EditUserDialogComponent {
-readonly data = inject<{user: Users}>(MAT_DIALOG_DATA);
+readonly data = inject<{user: User}>(MAT_DIALOG_DATA);
 
     public form = new FormGroup({
         name: new FormControl(this.data.user?.name || '',

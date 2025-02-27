@@ -1,30 +1,30 @@
 import { Injectable } from "@angular/core";
 import { BehaviorSubject } from "rxjs";
-import { Users } from "../interface/users";
+import { User } from "../interface/users";
 
 @Injectable({ providedIn: 'root' })
 
 export class UserService {
-    private user: Users | null = null;
+    private user: User | null = null;
 
-    private usersSubject$ = new BehaviorSubject<Users[]>([]);
+    private UserSubject$ = new BehaviorSubject<User[]>([]);
 
-    public users$ = this.usersSubject$.asObservable();
+    public user$ = this.UserSubject$.asObservable();
 
-    setUser(users: Users[]) {
-        this.usersSubject$.next(users);
+    setUser(User: User[]) {
+        this.UserSubject$.next(User);
     }
 
-    editUser(editedUser: Users) {
-        this.usersSubject$.next(
-            this.usersSubject$.value.map(user =>
+    editUser(editedUser: User) {
+        this.UserSubject$.next(
+            this.UserSubject$.value.map(user =>
                 editedUser.id === user.id ? editedUser : user
             )
         )
     }
 
-    createUser(user: Users) {
-        const existingUser = this.usersSubject$.value.find(
+    createUser(user: User) {
+        const existingUser = this.UserSubject$.value.find(
             item => item.email === user.email
         )
 
@@ -32,15 +32,15 @@ export class UserService {
             return undefined;
         }
         else {
-            this.usersSubject$.next(
-                [...this.usersSubject$.value, user]
+            this.UserSubject$.next(
+                [...this.UserSubject$.value, user]
             );
         }
     }
 
     deleteUser(id: number) {
-        this.usersSubject$.next(
-            this.usersSubject$.value.filter(
+        this.UserSubject$.next(
+            this.UserSubject$.value.filter(
                 item => id !== item.id
             )
         )
@@ -68,22 +68,15 @@ export class UserService {
         };
     }
 
-
     isAdmin(): boolean {
         return this.user ? this.user.isAdmin : false;
     }
-
 
     logout() {
         this.user = null;
     }
 
-    getCurrentUser(): string | null {
-        if (!this.user) return null;
-        return this.user.isAdmin ? 'Администратор' : 'Пользователь';
-    }
-
-
+    
     isLoggedIn(): boolean {
         return this.user !== null;
     }

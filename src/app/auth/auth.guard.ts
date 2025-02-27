@@ -1,21 +1,21 @@
-import { CanActivateFn } from '@angular/router';
-import { inject } from '@angular/core';
-import { Router } from '@angular/router';
-import { UserService } from '../service/user.service';
+// import { CanActivateFn } from '@angular/router';
+// import { inject } from '@angular/core';
+// import { Router } from '@angular/router';
+// import { Store } from '@ngrx/store';
 
 
-export const authGuard: CanActivateFn = () => {
-  const userService = inject(UserService);
-  const router = inject(Router);
+// export const authGuard: CanActivateFn = () => {
+//   const router = inject(Router);
+//   const store = inject(Store);
 
-  if (!userService.isLoggedIn()) {
-    router.navigate(['']);
-    return false;
-  }
-   if (userService.isAdmin()) {
-    return true;
-  }
+//   if (!store.isLoggedIn()) {
+//     router.navigate(['']);
+//     return false;
+//   }
+//    if (store.isAdmin()) {
+//     return true;
+//   }
  
-  router.navigate(['']);
-  return false;
-};
+//   router.navigate(['']);
+//   return false;
+// };

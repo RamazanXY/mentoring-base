@@ -2,9 +2,11 @@ import { AsyncPipe, NgFor } from "@angular/common";
 import { ChangeDetectionStrategy, Component, inject } from "@angular/core";
 import { UsersApiService } from "../service/users-api.service";
 import { UserCardComponent } from "./user-card/user-card.component";
-import { UserService } from "../service/user.service";
 import { CreateUserDialog } from "./create-user-dialog/create-user-dialog.component";
 import { MatSnackBar } from "@angular/material/snack-bar";
+import { Store } from "@ngrx/store";
+import { UserActions } from "./store/user.actions";
+import { selectCurrentUser, selectIsAdmin, selectIsLoggedIn, selectUsers } from "./store/users.selectors";
 
 
 @Component({
@@ -17,54 +19,65 @@ import { MatSnackBar } from "@angular/material/snack-bar";
 })
 
 export class UsersListComponent {
-    hasUnsavedChanges() {
-      throw new Error('Method not implemented.');
-    }
     readonly usersApiService = inject(UsersApiService);
-    readonly userService = inject(UserService)
+
+    private readonly store = inject(Store)
+
     private snackBar = inject(MatSnackBar);
 
-    CreateUserForm: any;
+    public readonly users$ = this.store.select(selectUsers);
+
+    readonly currentUser$ = this.store.select(selectCurrentUser);
     
-    canExit = false;
+    readonly isAdmin$ = this.store.select(selectIsAdmin);
+
+    readonly isLoggedIn$ = this.store.select(selectIsLoggedIn);
 
     constructor() {
-        this.usersApiService.getUsers().subscribe(
-            (response: any) => {
-                this.userService.setUser(response);
-            }
-        )
+        console.log("Обработал");
+        this.usersApiService.getUsers().subscribe((response: any) => {
+            console.log("ОТВЕТ ОТ СЕРВЕРА: ", response);
+            this.store.dispatch(UserActions.set({ users: response }));
+        });
     }
 
     deleteUser(id: number) {
-        this.userService.deleteUser(id);
+        this.store.dispatch(UserActions.delete({ id }))
     }
 
     editUser(user: any) {
-        this.userService.editUser({
-            ...user,
-            company: {
-                name: user.companyName
-            }
-        });
-    }
-
-    onClick() {
-        this.canExit = !this.canExit;
+        this.store.dispatch(UserActions.edit({ user }))
     }
 
     public createUser(formDate: any): void {
-        this.userService.createUser({
-            id: new Date().getTime(),
-            name: formDate.name,
-            email: formDate.email,
-            website: formDate.website,
-            company: {
-                name: formDate.companyName
-            },
-            isAdmin: false
-        }), this.snackBar.open('Пользователь создан!', 'ок', {
+        this.store.dispatch(
+            UserActions.create({
+                user: {
+                    id: new Date().getTime(),
+                    name: formDate.name,
+                    email: formDate.email,
+                    website: formDate.website,
+                    company: {
+                        name: formDate.companyName
+                    },
+                    isAdmin: false
+                },
+
+            })
+        ), this.snackBar.open('Пользователь создан!', 'ок', {
             duration: 5000
         });
+    }
+
+    loginAsAdmin() {
+        this.store.dispatch(UserActions.loginAsAdmin());
+    }
+
+    loginAsUser() {
+        this.store.dispatch(UserActions.loginAsUser());
+    }
+
+    logout() {
+        this.store.dispatch(UserActions.logout());
     }
 }
