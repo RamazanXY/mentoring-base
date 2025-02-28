@@ -8,6 +8,7 @@ import { userReducer } from './user-list/store/users.reducer';
 import { UserEffects } from './user-list/store/user.effects';
 import { provideStoreDevtools } from '@ngrx/store-devtools';
 import { todoReducer } from './todo-list/store/todo.reducer';
+import { provideEffects } from '@ngrx/effects';
 
 export const appConfig: ApplicationConfig = {
   providers: [

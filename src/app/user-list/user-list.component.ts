@@ -34,12 +34,12 @@ export class UsersListComponent {
     readonly isLoggedIn$ = this.store.select(selectIsLoggedIn);
 
     constructor() {
-        console.log("Обработал");
-        this.usersApiService.getUsers().subscribe((response: any) => {
-            console.log("ОТВЕТ ОТ СЕРВЕРА: ", response);
-            this.store.dispatch(UserActions.set({ users: response }));
-            localStorage.setItem("users", JSON.stringify(response));
-        });
+        // this.usersApiService.getUsers().subscribe((response: any) => {
+        //     console.log("ОТВЕТ ОТ СЕРВЕРА: ", response);
+        //     this.store.dispatch(UserActions.set({ users: response }));
+        //     localStorage.setItem("users", JSON.stringify(response));
+        // });
+        this.store.dispatch(UserActions.loadUsers());
     }
 
     deleteUser(id: number) {

@@ -7,7 +7,7 @@ export const UserActions = createActionGroup({
         'set': props<{ users: User[] }>(),
         'edit': props<{ user: User }>(),
         'create': props<{ user: User }>(),
-        'delete': props<{ id: number }>(),
+        'delete': props<{ id: number }>(),  
         'Login As Admin': emptyProps(),
         'Login As User': emptyProps(),
         'isAdmin': emptyProps(),

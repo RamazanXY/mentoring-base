@@ -16,8 +16,10 @@ export class UserEffects {
         this.actions$.pipe(
             ofType(UserActions.loadUsers),
             mergeMap(() =>
-                map((users) => UserActions.set({ users })),
-                catchError(() => of({ type: 'LOAD_USERS_FAILED' }))
+                this.usersApiService.getUsers().pipe(
+                    map((users) => UserActions.set({ users })),
+                    catchError(() => of({ type: 'LOAD_USERS_FAILED' })),
+                )
             )
         )
     );
