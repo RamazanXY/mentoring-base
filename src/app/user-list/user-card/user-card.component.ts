@@ -38,15 +38,15 @@ export class UserCardComponent {
 
     editOpenDialog(): void {
         const dialogRef = this.dialog.open(EditUserDialogComponent, {
-            data: { user: this.user },
+            data: { user: this.user, },
         });
 
         dialogRef.afterClosed().subscribe(editResult => {
             if (editResult) {
                 this.editUser.emit(editResult);
-                this._snackBar.open('Пользователь изменен!', 'ок'), {
-                    duration: 10000
-                };
+                this._snackBar.open('Пользователь изменен!', 'ок', {
+                    duration: 2000
+                });
             }
 
         })
@@ -61,7 +61,7 @@ export class UserCardComponent {
             if (deleteResult) {
                 this.deleteUser.emit(this.user.id);
                 this._snackBar.open('Пользователь удален!', 'ок', {
-                    duration: 10000
+                    duration: 2000
                 });
             }
         });

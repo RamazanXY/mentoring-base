@@ -10,9 +10,12 @@ const initialState: { users: User[], currentUser: User | null } = {
 
 export const userReducer = createReducer(
     initialState,
-    on(UserActions.set, (state, payload) => ),
-    on(UserActions.edit, (state, payload) => ({
+    on(UserActions.set, (state, payload) => ({
         ...state,
+        users: payload.users
+    }) ),
+    on(UserActions.edit, (state, payload) => ({
+        ...state,   
         users: state.users.map((user) => {
             if (user.id === payload.user.id) {
                 return payload.user;
@@ -34,8 +37,8 @@ export const userReducer = createReducer(
         ...state,
         currentUser: {
             isAdmin: true,
-            id: 1,
-            name: '',
+            id: new Date().getTime(),
+            name: 'Администратор',
             email: '',
             website: '',
             company: { name: '' }
@@ -45,8 +48,8 @@ export const userReducer = createReducer(
         ...state,
         currentUser: {
             isAdmin: false,
-            id: 2,
-            name: '',
+            id: new Date().getTime(),
+            name: 'Пользователь',
             email: '',
             website: '',
             company: { name: '' }

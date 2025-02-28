@@ -1,4 +1,4 @@
-import { createSelector, createFeatureSelector } from "@ngrx/store";
+import { createSelector } from "@ngrx/store";
 import { User } from "../../interface/users";
 
 
@@ -27,7 +27,7 @@ export const selectIsAdmin = createSelector(
 );
 export const selectIsLoggedIn = createSelector(
     selectCurrentUser,
-    (currentUser) => currentUser !== null
+    (currentUser) => currentUser !== null   
 );
 
 

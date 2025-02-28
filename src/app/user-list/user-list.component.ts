@@ -28,7 +28,7 @@ export class UsersListComponent {
     public readonly users$ = this.store.select(selectUsers);
 
     readonly currentUser$ = this.store.select(selectCurrentUser);
-    
+
     readonly isAdmin$ = this.store.select(selectIsAdmin);
 
     readonly isLoggedIn$ = this.store.select(selectIsLoggedIn);
@@ -38,6 +38,7 @@ export class UsersListComponent {
         this.usersApiService.getUsers().subscribe((response: any) => {
             console.log("ОТВЕТ ОТ СЕРВЕРА: ", response);
             this.store.dispatch(UserActions.set({ users: response }));
+            localStorage.setItem("users", JSON.stringify(response));
         });
     }
 
@@ -46,7 +47,18 @@ export class UsersListComponent {
     }
 
     editUser(user: any) {
-        this.store.dispatch(UserActions.edit({ user }))
+        this.store.dispatch(UserActions.edit({
+            user: {
+                id: user.id,
+                name: user.name,
+                email: user.email,
+                website: user.website,
+                company: {
+                    name: user.companyName
+                },
+                isAdmin: false
+            },
+        }))
     }
 
     public createUser(formDate: any): void {
