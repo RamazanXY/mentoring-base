@@ -19,18 +19,12 @@ import { selectCurrentUser, selectIsAdmin, selectIsLoggedIn, selectUsers } from 
 })
 
 export class UsersListComponent {
-    readonly usersApiService = inject(UsersApiService);
-
     private readonly store = inject(Store)
-
     private snackBar = inject(MatSnackBar);
 
     public readonly users$ = this.store.select(selectUsers);
-
     readonly currentUser$ = this.store.select(selectCurrentUser);
-
     readonly isAdmin$ = this.store.select(selectIsAdmin);
-
     readonly isLoggedIn$ = this.store.select(selectIsLoggedIn);
 
     constructor() {

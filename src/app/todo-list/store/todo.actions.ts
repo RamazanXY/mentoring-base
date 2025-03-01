@@ -1,4 +1,4 @@
-import { createActionGroup, props } from "@ngrx/store";
+import { createActionGroup, emptyProps, props } from "@ngrx/store";
 import { Todos } from "../../interface/todos";
 
 export const TodoActions = createActionGroup({
@@ -8,5 +8,6 @@ export const TodoActions = createActionGroup({
         'edit': props<{ todo: Todos }>(),
         'create': props<{ todo: Todos }>(),
         'delete': props<{ id: number }>(),
+        'Load Todos': emptyProps(),
     }
 });

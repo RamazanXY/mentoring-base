@@ -18,8 +18,6 @@ export const selectUsers = createSelector(
     (state: UserState) => state.users
 );
 
-// export const selectUserState = createFeatureSelector<UserState>('users');
-
 export const selectCurrentUser = (state: AppState) => state.users.currentUser;
 export const selectIsAdmin = createSelector(
     selectCurrentUser,

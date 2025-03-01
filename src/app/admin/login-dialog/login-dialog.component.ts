@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
-import { UserService } from '../../service/user.service';
 import { Router } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { UserActions } from '../../user-list/store/user.actions';

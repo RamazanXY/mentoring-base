@@ -18,16 +18,11 @@ import { selectTodos } from "./store/todo.selector";
 })
 
 export class TodosListComponent {
-    readonly todosApiService = inject(TodosApiService);
     private readonly store = inject(Store);
     public readonly todos$ = this.store.select(selectTodos);
 
     constructor() {
-        this.todosApiService.getTodos().subscribe(
-            (response: any) => {
-                this.store.dispatch(TodoActions.set({ todos: response }));
-            }
-        )
+      this.store.dispatch(TodoActions.loadTodos());
     }
 
     deleteTodo(id: number) {
