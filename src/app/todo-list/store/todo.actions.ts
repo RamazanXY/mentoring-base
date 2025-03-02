@@ -8,6 +8,6 @@ export const TodoActions = createActionGroup({
         'edit': props<{ todo: Todos }>(),
         'create': props<{ todo: Todos }>(),
         'delete': props<{ id: number }>(),
-        'Load Todos': emptyProps(),
+        'loadTodos': emptyProps(),
     }
 });

@@ -9,6 +9,7 @@ import { UserEffects } from './user-list/store/user.effects';
 import { provideStoreDevtools } from '@ngrx/store-devtools';
 import { todoReducer } from './todo-list/store/todo.reducer';
 import { provideEffects } from '@ngrx/effects';
+import { TodoEffects } from './todo-list/store/todo.effects';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -20,6 +21,7 @@ export const appConfig: ApplicationConfig = {
       todos: todoReducer
     }),
     provideEffects([UserEffects]),
+    provideEffects([TodoEffects]),
     provideStoreDevtools({ maxAge: 25, logOnly: !isDevMode() }),
   ]
 };

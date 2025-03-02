@@ -9,16 +9,16 @@ export class TodoEffects {
     constructor(
         private actions$: Actions,
         private todosApiService: TodosApiService,
-    ) {}
+    ) { }
 
     loadTodos$ = createEffect(() =>
         this.actions$.pipe(
             ofType(TodoActions.loadTodos),
             mergeMap(() =>
-            this.todosApiService.getTodos().pipe(
-                map((todos) => TodoActions.set({todos})),
-                catchError(() => of({ type: 'LOAD_Todos_FAILED'})),
-            )
+                this.todosApiService.getTodos().pipe(
+                    map((todos) => TodoActions.set({ todos })),
+                    catchError(() => of({ type: 'LOAD_Todos_FAILED' })),
+                )
             )
         )
     )

@@ -6,6 +6,7 @@ import { CreateTodoForm } from "./create-todo-form/create-todo-form.component";
 import { Store } from "@ngrx/store";
 import { TodoActions } from "./store/todo.actions";
 import { selectTodos } from "./store/todo.selector";
+import { MatSnackBar } from "@angular/material/snack-bar";
 
 
 @Component({
@@ -19,6 +20,7 @@ import { selectTodos } from "./store/todo.selector";
 
 export class TodosListComponent {
     private readonly store = inject(Store);
+    private readonly snackBar = inject(MatSnackBar);
     public readonly todos$ = this.store.select(selectTodos);
 
     constructor() {
@@ -26,7 +28,8 @@ export class TodosListComponent {
     }
 
     deleteTodo(id: number) {
-        this.store.dispatch(TodoActions.delete({ id }))
+        this.store.dispatch(TodoActions.delete({ id }));
+        this.snackBar
     }
 
     editTodo(todo: any) {

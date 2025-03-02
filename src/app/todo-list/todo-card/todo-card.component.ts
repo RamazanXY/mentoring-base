@@ -1,4 +1,5 @@
-import { Component, EventEmitter, Input, Output } from "@angular/core";
+import { Component, EventEmitter, inject, Input, Output } from "@angular/core";
+import { MatDialog } from "@angular/material/dialog";
 
 @Component({
     selector: 'app-todo-card',
@@ -8,6 +9,8 @@ import { Component, EventEmitter, Input, Output } from "@angular/core";
 })
 
 export class TodoCardComponent {
+    readonly dialog = inject(MatDialog);
+
     @Input()
     todo: any;
 
@@ -17,4 +20,8 @@ export class TodoCardComponent {
     onDeleteTodo(todoId: number) {
         this.deleteTodo.emit(todoId)
     }
+
+    // deleteOpenDialog(): void {
+    //     const dialogRef = this.dialog.
+    // }
 }

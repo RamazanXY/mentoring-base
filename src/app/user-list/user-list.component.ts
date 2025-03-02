@@ -1,6 +1,5 @@
 import { AsyncPipe, NgFor } from "@angular/common";
 import { ChangeDetectionStrategy, Component, inject } from "@angular/core";
-import { UsersApiService } from "../service/users-api.service";
 import { UserCardComponent } from "./user-card/user-card.component";
 import { CreateUserDialog } from "./create-user-dialog/create-user-dialog.component";
 import { MatSnackBar } from "@angular/material/snack-bar";
@@ -28,12 +27,11 @@ export class UsersListComponent {
     readonly isLoggedIn$ = this.store.select(selectIsLoggedIn);
 
     constructor() {
-        // this.usersApiService.getUsers().subscribe((response: any) => {
-        //     console.log("ОТВЕТ ОТ СЕРВЕРА: ", response);
-        //     this.store.dispatch(UserActions.set({ users: response }));
-        //     localStorage.setItem("users", JSON.stringify(response));
-        // });
-        this.store.dispatch(UserActions.loadUsers());
+        const savedUsers = localStorage.getItem('users');
+        if (savedUsers) {
+            const users = JSON.parse(savedUsers);
+            this.store.dispatch(UserActions.set({ users }));
+        }
     }
 
     deleteUser(id: number) {

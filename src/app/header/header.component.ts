@@ -51,5 +51,7 @@ export class HeaderComponent {
     )
 
     this.isUpperCase = !this.isUpperCase;
+
+    
   }
 }

@@ -4,7 +4,7 @@ import { TodoActions } from "./todo.actions";
 
 const initialState: { todos: Todos[] } = {
     todos: [],
-}
+};
 
 export const todoReducer = createReducer(
     initialState,
