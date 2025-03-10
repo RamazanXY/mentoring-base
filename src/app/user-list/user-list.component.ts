@@ -6,6 +6,8 @@ import { MatSnackBar } from "@angular/material/snack-bar";
 import { Store } from "@ngrx/store";
 import { UserActions } from "./store/user.actions";
 import { selectCurrentUser, selectIsAdmin, selectIsLoggedIn, selectUsers } from "./store/users.selectors";
+import { LocalStorageService } from "../service/local-storage-service/local-storage.service";
+import { User } from "../interface/users";
 
 
 @Component({
@@ -20,23 +22,33 @@ import { selectCurrentUser, selectIsAdmin, selectIsLoggedIn, selectUsers } from 
 export class UsersListComponent {
     private readonly store = inject(Store)
     private snackBar = inject(MatSnackBar);
+    private localStorageService = inject(LocalStorageService);
 
     public readonly users$ = this.store.select(selectUsers);
     readonly currentUser$ = this.store.select(selectCurrentUser);
     readonly isAdmin$ = this.store.select(selectIsAdmin);
     readonly isLoggedIn$ = this.store.select(selectIsLoggedIn);
 
-    constructor() {
-        const savedUsers = localStorage.getItem('users');
-        if (savedUsers) {
-            const users = JSON.parse(savedUsers);
-            this.store.dispatch(UserActions.set({ users }));
+    constructor() { }
+
+    ngOnInit(): void {
+        const savedUsers = this.localStorageService.getItem<User[]>('users');
+        if (savedUsers && Array.isArray(savedUsers)) {
+            this.store.dispatch(UserActions.set({ users: savedUsers }));
+        } else {
+            this.store.dispatch(UserActions.loadUsers());
         }
     }
 
     deleteUser(id: number) {
         this.store.dispatch(UserActions.delete({ id }))
-    }
+        this.users$.subscribe(users => {
+            if (users.length === 0) {
+                this.store.dispatch(UserActions.loadUsers());
+            }
+        }
+        )
+    };
 
     editUser(user: any) {
         this.store.dispatch(UserActions.edit({
@@ -69,7 +81,7 @@ export class UsersListComponent {
 
             })
         ), this.snackBar.open('Пользователь создан!', 'ок', {
-            duration: 5000
+            duration: 2000
         });
     }
 

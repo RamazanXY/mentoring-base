@@ -13,6 +13,6 @@ export const UserActions = createActionGroup({
         'isAdmin': emptyProps(),
         'Logout': emptyProps(),
         'Is Logged In': emptyProps(),
-        'loadUsersBackend': emptyProps(),
+        'loadUsers': emptyProps(),
     }
 });
