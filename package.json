@@ -24,6 +24,13 @@
   },
   "homepage": "https://github.com/RamazanXY/mentoring-base#readme",
   "dependencies": {
-    "@angular/core": "^19.2.1"
+    "@angular/cdk": "^19.2.3",
+    "@angular/common": "^19.2.2",
+    "@angular/core": "^19.2.1",
+    "@angular/forms": "^19.2.2",
+    "@angular/material": "^19.2.3",
+    "@angular/router": "^19.2.2",
+    "@ngrx/effects": "^19.0.1",
+    "@ngrx/store-devtools": "^19.0.1"
   }
 }

@@ -21,19 +21,11 @@
         },
         {
           "file": ".gitignore",
-          "hash": "11370576330668101473"
-        },
-        {
-          "file": ".prettierignore",
-          "hash": "5407418692668764289"
-        },
-        {
-          "file": ".prettierrc",
-          "hash": "16267754514737964994"
+          "hash": "4689145951703824387"
         },
         {
           "file": ".vscode/extensions.json",
-          "hash": "15904881119927760751"
+          "hash": "1031907106376631047"
         },
         {
           "file": ".vscode/launch.json",
@@ -48,38 +40,28 @@
           "hash": "9828502291514621578"
         },
         {
-          "file": "eslint.config.mjs",
-          "hash": "3462096019013144053"
+          "file": "angular.json",
+          "hash": "1419262982111354283"
         },
         {
           "file": "jest.config.ts",
-          "hash": "3494843969422251966"
+          "hash": "7544409015863045561"
         },
         {
           "file": "jest.preset.js",
-          "hash": "9430166341120122740"
+          "hash": "7473220183190921152"
         },
         {
           "file": "nx.json",
-          "hash": "16311198249483322487"
-        },
-        {
-          "file": "package-lock.json",
-          "hash": "6665930575077769466"
+          "hash": "13673052650091295316"
         },
         {
           "file": "package.json",
-          "hash": "10480876829942233168",
-          "deps": [
-            "npm:@angular-devkit/build-angular",
-            "npm:@nrwl/nx-cloud",
-            "npm:nx",
-            "npm:@angular/core"
-          ]
+          "hash": "11747333986964056418"
         },
         {
           "file": "project.json",
-          "hash": "5005047715728044823"
+          "hash": "6971243527801589232"
         },
         {
           "file": "src/app/admin/admin.component.html",
@@ -123,7 +105,7 @@
         },
         {
           "file": "src/app/app.config.ts",
-          "hash": "672445015178272118"
+          "hash": "6934944013173109152"
         },
         {
           "file": "src/app/app.routes.ts",
@@ -351,7 +333,7 @@
         },
         {
           "file": "src/assets/img/assortment.svg",
-          "hash": "11811984747838062577"
+          "hash": "8051454085077227368"
         },
         {
           "file": "src/assets/img/balon.png",
@@ -363,7 +345,7 @@
         },
         {
           "file": "src/assets/img/basket-logo.svg",
-          "hash": "1934388754015641347"
+          "hash": "15363868045822380261"
         },
         {
           "file": "src/assets/img/build-pro-tools.png",
@@ -371,15 +353,15 @@
         },
         {
           "file": "src/assets/img/call-calling.svg",
-          "hash": "13214476074968265041"
+          "hash": "8522094577193881464"
         },
         {
           "file": "src/assets/img/company-logo.svg",
-          "hash": "1574025987469796303"
+          "hash": "13571638920025843061"
         },
         {
           "file": "src/assets/img/delivery.svg",
-          "hash": "3753394981047792831"
+          "hash": "8500332162182110221"
         },
         {
           "file": "src/assets/img/enamel-paint.png",
@@ -387,11 +369,11 @@
         },
         {
           "file": "src/assets/img/facebook.svg",
-          "hash": "5581595408840366817"
+          "hash": "17023318698759316560"
         },
         {
           "file": "src/assets/img/light-logo.svg",
-          "hash": "6191982477734878691"
+          "hash": "7698921992440974709"
         },
         {
           "file": "src/assets/img/line-horizontal.png",
@@ -403,15 +385,15 @@
         },
         {
           "file": "src/assets/img/love-logo-black.svg",
-          "hash": "13959284022064838016"
+          "hash": "6699936537457808274"
         },
         {
           "file": "src/assets/img/love-logo.svg",
-          "hash": "8438744652706310830"
+          "hash": "18205067273935584301"
         },
         {
           "file": "src/assets/img/magnifier.svg",
-          "hash": "17514682287498270025"
+          "hash": "2216282894733731225"
         },
         {
           "file": "src/assets/img/man-drill.png",
@@ -419,11 +401,11 @@
         },
         {
           "file": "src/assets/img/map-pin.svg",
-          "hash": "2992198161667329888"
+          "hash": "18049870251260355581"
         },
         {
           "file": "src/assets/img/new-items.svg",
-          "hash": "8737233064256027582"
+          "hash": "13046865268858353998"
         },
         {
           "file": "src/assets/img/next-slider.png",
@@ -435,7 +417,7 @@
         },
         {
           "file": "src/assets/img/quality.svg",
-          "hash": "1210692835592839145"
+          "hash": "11085150391095271634"
         },
         {
           "file": "src/assets/img/rectangle-img.png",
@@ -443,11 +425,11 @@
         },
         {
           "file": "src/assets/img/sales.svg",
-          "hash": "7554883123268840808"
+          "hash": "17020263092964960600"
         },
         {
           "file": "src/assets/img/sms.svg",
-          "hash": "11548602416164637924"
+          "hash": "2919312085697024564"
         },
         {
           "file": "src/assets/img/socket.png",
@@ -459,23 +441,23 @@
         },
         {
           "file": "src/assets/img/vector-shadow.svg",
-          "hash": "692686793309370954"
+          "hash": "15748692247362170405"
         },
         {
           "file": "src/assets/img/whatsapp.svg",
-          "hash": "6081074917583616749"
+          "hash": "3905313653486298403"
         },
         {
           "file": "src/assets/img/white-phone.svg",
-          "hash": "3874292949411074051"
+          "hash": "17164545611351620790"
         },
         {
           "file": "src/assets/img/youtube.svg",
-          "hash": "15449923898926879547"
+          "hash": "16900992637342436380"
         },
         {
           "file": "src/assets/img/сatalog.svg",
-          "hash": "17676588712384915146"
+          "hash": "16999418600916093509"
         },
         {
           "file": "src/favicon.ico",
@@ -483,7 +465,7 @@
         },
         {
           "file": "src/index.html",
-          "hash": "14299744660518740185"
+          "hash": "12938785438762195554"
         },
         {
           "file": "src/main.ts",
@@ -491,7 +473,7 @@
         },
         {
           "file": "src/styles.scss",
-          "hash": "4997108942955308675"
+          "hash": "3678124723817874342"
         },
         {
           "file": "tsconfig.app.json",
@@ -499,11 +481,11 @@
         },
         {
           "file": "tsconfig.base.json",
-          "hash": "3780760068744107079"
+          "hash": "1361498549601210123"
         },
         {
           "file": "tsconfig.json",
-          "hash": "7662560187875352225"
+          "hash": "2427904032419167281"
         },
         {
           "file": "tsconfig.spec.json",
