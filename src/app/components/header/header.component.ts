@@ -1,13 +1,13 @@
 import { DatePipe, NgFor, NgIf } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { YellowDirective } from '../directives/yellow.directive';
+import { YellowDirective } from '../../directives/yellow.directive';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialog } from '@angular/material/dialog';
-import { LoginDialogComponent } from '../admin/login-dialog/login-dialog.component';
+import { LoginDialogComponent } from '../../admin/login-dialog/login-dialog.component';
 import { Store } from '@ngrx/store';
 import { CommonModule } from '@angular/common';
-import { selectCurrentUser, selectIsAdmin, selectIsLoggedIn } from '../user-list/store/users.selectors';
+import { selectCurrentUser, selectIsAdmin, selectIsLoggedIn } from '../../user-list/store/users.selectors';
 
 const aboutCompanyFn = (text: string) => text;
 
@@ -26,7 +26,7 @@ export class HeaderComponent {
   isAdmin$ = this.store.select(selectIsAdmin);
   currentUser$ = this.store.select(selectCurrentUser);
 
-  
+
   openLoginDialog(): void {
     this.dialog.open(LoginDialogComponent, {
       width: '300px'
@@ -52,6 +52,6 @@ export class HeaderComponent {
 
     this.isUpperCase = !this.isUpperCase;
 
-    
+
   }
 }
