@@ -32,6 +32,10 @@
           "hash": "17406702432687230417"
         },
         {
+          "file": ".vscode/settings.json",
+          "hash": "15557613767881435234"
+        },
+        {
           "file": ".vscode/tasks.json",
           "hash": "10093397977228577162"
         },
@@ -41,7 +45,7 @@
         },
         {
           "file": "angular.json",
-          "hash": "1419262982111354283"
+          "hash": "3742477680539154766"
         },
         {
           "file": "jest.config.ts",
@@ -56,36 +60,29 @@
           "hash": "13673052650091295316"
         },
         {
+          "file": "package-lock.json",
+          "hash": "14729089980186604866"
+        },
+        {
           "file": "package.json",
-          "hash": "11747333986964056418"
+          "hash": "12934973375311028413",
+          "deps": [
+            "npm:@angular-devkit/build-angular",
+            "npm:@nrwl/nx-cloud",
+            "npm:nx",
+            "npm:@angular/cdk",
+            "npm:@angular/common",
+            "npm:@angular/core",
+            "npm:@angular/forms",
+            "npm:@angular/material",
+            "npm:@angular/router",
+            "npm:@ngrx/effects",
+            "npm:@ngrx/store-devtools"
+          ]
         },
         {
           "file": "project.json",
           "hash": "6971243527801589232"
-        },
-        {
-          "file": "src/app/admin/admin.component.html",
-          "hash": "12351547965698354988"
-        },
-        {
-          "file": "src/app/admin/admin.component.scss",
-          "hash": "5266012320192070686"
-        },
-        {
-          "file": "src/app/admin/admin.component.ts",
-          "hash": "4673369724348777653"
-        },
-        {
-          "file": "src/app/admin/login-dialog/login-dialog.component.html",
-          "hash": "10977317293078870015"
-        },
-        {
-          "file": "src/app/admin/login-dialog/login-dialog.component.scss",
-          "hash": "15211591659584420588"
-        },
-        {
-          "file": "src/app/admin/login-dialog/login-dialog.component.ts",
-          "hash": "7923391790016369722"
         },
         {
           "file": "src/app/app.component.html",
@@ -101,19 +98,227 @@
         },
         {
           "file": "src/app/app.component.ts",
-          "hash": "17626916817208491066"
+          "hash": "3505851829183855555"
         },
         {
           "file": "src/app/app.config.ts",
-          "hash": "6934944013173109152"
+          "hash": "3273473137792639323"
         },
         {
           "file": "src/app/app.routes.ts",
-          "hash": "15730276369894992548"
+          "hash": "13214559749469533996"
         },
         {
-          "file": "src/app/auth/auth.guard.ts",
-          "hash": "1464880027226889234"
+          "file": "src/app/components/admin/admin.component.html",
+          "hash": "12351547965698354988"
+        },
+        {
+          "file": "src/app/components/admin/admin.component.scss",
+          "hash": "5266012320192070686"
+        },
+        {
+          "file": "src/app/components/admin/admin.component.ts",
+          "hash": "4673369724348777653"
+        },
+        {
+          "file": "src/app/components/admin/login-dialog/login-dialog.component.html",
+          "hash": "10977317293078870015"
+        },
+        {
+          "file": "src/app/components/admin/login-dialog/login-dialog.component.scss",
+          "hash": "15211591659584420588"
+        },
+        {
+          "file": "src/app/components/admin/login-dialog/login-dialog.component.ts",
+          "hash": "7923391790016369722"
+        },
+        {
+          "file": "src/app/components/footer/footer.component.html",
+          "hash": "15271636748169414958"
+        },
+        {
+          "file": "src/app/components/footer/footer.component.scss",
+          "hash": "9194402919360104523"
+        },
+        {
+          "file": "src/app/components/footer/footer.component.ts",
+          "hash": "8339213682599648484"
+        },
+        {
+          "file": "src/app/components/header/header.component.html",
+          "hash": "9395131986394085143"
+        },
+        {
+          "file": "src/app/components/header/header.component.scss",
+          "hash": "769115829458407059"
+        },
+        {
+          "file": "src/app/components/header/header.component.ts",
+          "hash": "1689780902923707817"
+        },
+        {
+          "file": "src/app/components/main/main.component.html",
+          "hash": "15313078562007797026"
+        },
+        {
+          "file": "src/app/components/main/main.component.scss",
+          "hash": "3935943482273083475"
+        },
+        {
+          "file": "src/app/components/main/main.component.ts",
+          "hash": "567046744745617879"
+        },
+        {
+          "file": "src/app/components/todo-list/create-todo-form/create-todo-form.component.html",
+          "hash": "1651782557881786262"
+        },
+        {
+          "file": "src/app/components/todo-list/create-todo-form/create-todo-form.component.scss",
+          "hash": "1525164194286963976"
+        },
+        {
+          "file": "src/app/components/todo-list/create-todo-form/create-todo-form.component.ts",
+          "hash": "13672463852132274669"
+        },
+        {
+          "file": "src/app/components/todo-list/store/todo.actions.ts",
+          "hash": "3569533372974649334"
+        },
+        {
+          "file": "src/app/components/todo-list/store/todo.effects.ts",
+          "hash": "5705288223978863767"
+        },
+        {
+          "file": "src/app/components/todo-list/store/todo.reducer.ts",
+          "hash": "11882764703335023897"
+        },
+        {
+          "file": "src/app/components/todo-list/store/todo.selector.ts",
+          "hash": "3736243828761342718"
+        },
+        {
+          "file": "src/app/components/todo-list/todo-card/todo-card.component.html",
+          "hash": "14736658197920601080"
+        },
+        {
+          "file": "src/app/components/todo-list/todo-card/todo-card.component.scss",
+          "hash": "9124199127438817075"
+        },
+        {
+          "file": "src/app/components/todo-list/todo-card/todo-card.component.ts",
+          "hash": "8095188647157965251"
+        },
+        {
+          "file": "src/app/components/todo-list/todos-list.component.html",
+          "hash": "18211614034762821893"
+        },
+        {
+          "file": "src/app/components/todo-list/todos-list.component.scss",
+          "hash": "9773565209017064066"
+        },
+        {
+          "file": "src/app/components/todo-list/todos-list.component.ts",
+          "hash": "4557706103386630510"
+        },
+        {
+          "file": "src/app/components/user-list/create-edit-user/create-edit-user.component.html",
+          "hash": "15402933373887188856"
+        },
+        {
+          "file": "src/app/components/user-list/create-edit-user/create-edit-user.component.scss",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "src/app/components/user-list/create-edit-user/create-edit-user.component.ts",
+          "hash": "15608513196680657819"
+        },
+        {
+          "file": "src/app/components/user-list/create-user-dialog/create-user-dialog.component.html",
+          "hash": "10550389346169153789"
+        },
+        {
+          "file": "src/app/components/user-list/create-user-dialog/create-user-dialog.component.scss",
+          "hash": "137542215183332964"
+        },
+        {
+          "file": "src/app/components/user-list/create-user-dialog/create-user-dialog.component.ts",
+          "hash": "5816610548811875642"
+        },
+        {
+          "file": "src/app/components/user-list/create-user-dialog/create-user-form/create-user-form.component.html",
+          "hash": "14844129054430211371"
+        },
+        {
+          "file": "src/app/components/user-list/create-user-dialog/create-user-form/create-user-form.component.scss",
+          "hash": "4307891119003129848"
+        },
+        {
+          "file": "src/app/components/user-list/create-user-dialog/create-user-form/create-user-form.component.ts",
+          "hash": "4703986818091204932"
+        },
+        {
+          "file": "src/app/components/user-list/edit-user-dialog/edit-user-dialog.component.html",
+          "hash": "16982859620577788880"
+        },
+        {
+          "file": "src/app/components/user-list/edit-user-dialog/edit-user-dialog.component.scss",
+          "hash": "6942248822911746609"
+        },
+        {
+          "file": "src/app/components/user-list/edit-user-dialog/edit-user-dialog.component.ts",
+          "hash": "7836221986688211662"
+        },
+        {
+          "file": "src/app/components/user-list/store/user.actions.ts",
+          "hash": "15110331122099306512"
+        },
+        {
+          "file": "src/app/components/user-list/store/user.effects.ts",
+          "hash": "4880425098112394001"
+        },
+        {
+          "file": "src/app/components/user-list/store/users.reducer.ts",
+          "hash": "3578671906693766372"
+        },
+        {
+          "file": "src/app/components/user-list/store/users.selectors.ts",
+          "hash": "12279354372644829964"
+        },
+        {
+          "file": "src/app/components/user-list/user-card/delete-user-dialog/delete-user-dialog.component.html",
+          "hash": "10991609701914191926"
+        },
+        {
+          "file": "src/app/components/user-list/user-card/delete-user-dialog/delete-user-dialog.component.scss",
+          "hash": "6685702199297993406"
+        },
+        {
+          "file": "src/app/components/user-list/user-card/delete-user-dialog/delete-user-dialog.component.ts",
+          "hash": "12133256951407384343"
+        },
+        {
+          "file": "src/app/components/user-list/user-card/user-card.component.html",
+          "hash": "11613381810364902568"
+        },
+        {
+          "file": "src/app/components/user-list/user-card/user-card.component.scss",
+          "hash": "11804794934620881603"
+        },
+        {
+          "file": "src/app/components/user-list/user-card/user-card.component.ts",
+          "hash": "682140812060820304"
+        },
+        {
+          "file": "src/app/components/user-list/user-list.component.html",
+          "hash": "12971767737074873011"
+        },
+        {
+          "file": "src/app/components/user-list/user-list.component.scss",
+          "hash": "16081761185873107769"
+        },
+        {
+          "file": "src/app/components/user-list/user-list.component.ts",
+          "hash": "8610359229129325727"
         },
         {
           "file": "src/app/directives/hover-shadow.directive.ts",
@@ -128,28 +333,8 @@
           "hash": "13854208386781668659"
         },
         {
-          "file": "src/app/footer/footer.component.html",
-          "hash": "9933553543016243009"
-        },
-        {
-          "file": "src/app/footer/footer.component.scss",
-          "hash": "16303665564677004248"
-        },
-        {
-          "file": "src/app/footer/footer.component.ts",
-          "hash": "8339213682599648484"
-        },
-        {
-          "file": "src/app/header/header.component.html",
-          "hash": "2470132922193739297"
-        },
-        {
-          "file": "src/app/header/header.component.scss",
-          "hash": "7439318992657686644"
-        },
-        {
-          "file": "src/app/header/header.component.ts",
-          "hash": "17297825788907188667"
+          "file": "src/app/guards/auth/auth.guard.ts",
+          "hash": "17328098352465720973"
         },
         {
           "file": "src/app/interface/todos.ts",
@@ -158,18 +343,6 @@
         {
           "file": "src/app/interface/users.ts",
           "hash": "7388763566996014443"
-        },
-        {
-          "file": "src/app/main/main.component.html",
-          "hash": "1514422058479257654"
-        },
-        {
-          "file": "src/app/main/main.component.scss",
-          "hash": "7691416282566690241"
-        },
-        {
-          "file": "src/app/main/main.component.ts",
-          "hash": "567046744745617879"
         },
         {
           "file": "src/app/pipes/phone-number.pipe.ts",
@@ -186,146 +359,6 @@
         {
           "file": "src/app/service/local-storage-service/local-storage.service.ts",
           "hash": "16898720641521707584"
-        },
-        {
-          "file": "src/app/todo-list/create-todo-form/create-todo-form.component.html",
-          "hash": "1651782557881786262"
-        },
-        {
-          "file": "src/app/todo-list/create-todo-form/create-todo-form.component.scss",
-          "hash": "1525164194286963976"
-        },
-        {
-          "file": "src/app/todo-list/create-todo-form/create-todo-form.component.ts",
-          "hash": "13672463852132274669"
-        },
-        {
-          "file": "src/app/todo-list/store/todo.actions.ts",
-          "hash": "6163564205169085948"
-        },
-        {
-          "file": "src/app/todo-list/store/todo.effects.ts",
-          "hash": "15549199432363473237"
-        },
-        {
-          "file": "src/app/todo-list/store/todo.reducer.ts",
-          "hash": "1216909672511544631"
-        },
-        {
-          "file": "src/app/todo-list/store/todo.selector.ts",
-          "hash": "12421276065424821486"
-        },
-        {
-          "file": "src/app/todo-list/todo-card/todo-card.component.html",
-          "hash": "14736658197920601080"
-        },
-        {
-          "file": "src/app/todo-list/todo-card/todo-card.component.scss",
-          "hash": "9124199127438817075"
-        },
-        {
-          "file": "src/app/todo-list/todo-card/todo-card.component.ts",
-          "hash": "8095188647157965251"
-        },
-        {
-          "file": "src/app/todo-list/todos-list.component.html",
-          "hash": "18211614034762821893"
-        },
-        {
-          "file": "src/app/todo-list/todos-list.component.scss",
-          "hash": "9773565209017064066"
-        },
-        {
-          "file": "src/app/todo-list/todos-list.component.ts",
-          "hash": "16825805090661765483"
-        },
-        {
-          "file": "src/app/user-list/create-user-dialog/create-user-dialog.component.html",
-          "hash": "10550389346169153789"
-        },
-        {
-          "file": "src/app/user-list/create-user-dialog/create-user-dialog.component.scss",
-          "hash": "137542215183332964"
-        },
-        {
-          "file": "src/app/user-list/create-user-dialog/create-user-dialog.component.ts",
-          "hash": "7349189276781822519"
-        },
-        {
-          "file": "src/app/user-list/create-user-dialog/create-user-form/create-user-form.component.html",
-          "hash": "14844129054430211371"
-        },
-        {
-          "file": "src/app/user-list/create-user-dialog/create-user-form/create-user-form.component.scss",
-          "hash": "4307891119003129848"
-        },
-        {
-          "file": "src/app/user-list/create-user-dialog/create-user-form/create-user-form.component.ts",
-          "hash": "15848710660696654471"
-        },
-        {
-          "file": "src/app/user-list/edit-user-dialog/edit-user-dialog.component.html",
-          "hash": "16982859620577788880"
-        },
-        {
-          "file": "src/app/user-list/edit-user-dialog/edit-user-dialog.component.scss",
-          "hash": "6942248822911746609"
-        },
-        {
-          "file": "src/app/user-list/edit-user-dialog/edit-user-dialog.component.ts",
-          "hash": "17901146172112012394"
-        },
-        {
-          "file": "src/app/user-list/store/user.actions.ts",
-          "hash": "17608180993512479092"
-        },
-        {
-          "file": "src/app/user-list/store/user.effects.ts",
-          "hash": "13160692196064862629"
-        },
-        {
-          "file": "src/app/user-list/store/users.reducer.ts",
-          "hash": "2668522291854775532"
-        },
-        {
-          "file": "src/app/user-list/store/users.selectors.ts",
-          "hash": "12300835058986557686"
-        },
-        {
-          "file": "src/app/user-list/user-card/delete-user-dialog/delete-user-dialog.component.html",
-          "hash": "10991609701914191926"
-        },
-        {
-          "file": "src/app/user-list/user-card/delete-user-dialog/delete-user-dialog.component.scss",
-          "hash": "6685702199297993406"
-        },
-        {
-          "file": "src/app/user-list/user-card/delete-user-dialog/delete-user-dialog.component.ts",
-          "hash": "16593059996780959264"
-        },
-        {
-          "file": "src/app/user-list/user-card/user-card.component.html",
-          "hash": "11613381810364902568"
-        },
-        {
-          "file": "src/app/user-list/user-card/user-card.component.scss",
-          "hash": "11804794934620881603"
-        },
-        {
-          "file": "src/app/user-list/user-card/user-card.component.ts",
-          "hash": "12387855337243617364"
-        },
-        {
-          "file": "src/app/user-list/user-list.component.html",
-          "hash": "12971767737074873011"
-        },
-        {
-          "file": "src/app/user-list/user-list.component.scss",
-          "hash": "16081761185873107769"
-        },
-        {
-          "file": "src/app/user-list/user-list.component.ts",
-          "hash": "5782258652433460151"
         },
         {
           "file": "src/assets/.gitkeep",
@@ -473,7 +506,7 @@
         },
         {
           "file": "src/styles.scss",
-          "hash": "3678124723817874342"
+          "hash": "1692176283176420707"
         },
         {
           "file": "tsconfig.app.json",

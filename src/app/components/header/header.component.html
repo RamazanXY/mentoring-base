@@ -15,7 +15,7 @@
             <div routerLink="" class="header-navigation-item">{{ headerItem1 }}</div>
             <div class="header-navigation-item">{{ aboutCompany }}</div>
             <div *ngIf="isShowCatalog" class="header-navigation-item">{{ headerItem2 }}</div>
-            <button (click)="isShowCatalog=!isShowCatalog" mat-stroked-button class="header--styles-text-button"
+            <button (click)="isShowCatalog=!isShowCatalog" mat-button class="header--styles-text-button"
                     type="button">Скрыть/Показать
             </button>
           </nav>

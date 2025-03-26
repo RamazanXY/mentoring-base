@@ -6,8 +6,8 @@ import { MatSnackBar } from "@angular/material/snack-bar";
 import { Store } from "@ngrx/store";
 import { UserActions } from "./store/user.actions";
 import { selectCurrentUser, selectIsAdmin, selectIsLoggedIn, selectUsers } from "./store/users.selectors";
-import { LocalStorageService } from "../service/local-storage-service/local-storage.service";
-import { User } from "../interface/users";
+import {LocalStorageService} from "../../service/local-storage-service/local-storage.service";
+import {User} from "../../interface/users";
 
 
 @Component({
@@ -30,6 +30,26 @@ export class UsersListComponent {
     readonly isLoggedIn$ = this.store.select(selectIsLoggedIn);
 
     constructor() { }
+
+    // public openDialog(user?: User) {
+    //     const dialogRef = this.dialog.open(CreateEditUserComponent, {
+    //         data: {
+    //             isEdit: true,
+    //             user: user,
+    //             title: 'addUser',
+    //         },
+    //             width: '400px'
+    //     })
+    //     dialogRef.afterClosed().subscribe(result) => {
+    //         if(user) {
+    //             this.store.select(selectUsers);
+    //             this.UserService.editUser(result);
+    //         }
+    //         else {
+    //             this.UserService.addUser(result);
+    //         }
+    //     }
+    // }
 
     ngOnInit(): void {
         const savedUsers = this.localStorageService.getItem<User[]>('users');

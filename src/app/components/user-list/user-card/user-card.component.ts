@@ -7,13 +7,13 @@ import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatButtonModule } from "@angular/material/button";
 import { MatCardModule } from '@angular/material/card';
 import { MatSnackBar } from "@angular/material/snack-bar";
-import { PhoneNumberPipe } from "../../pipes/phone-number.pipe";
-import { HoverShadowDirective } from "../../directives/hover-shadow.directive";
+import {PhoneNumberPipe} from "../../../pipes/phone-number.pipe";
+import {HoverShadowDirective} from "../../../directives/hover-shadow.directive";
 
 @Component({
     selector: 'app-user-card',
     standalone: true,
-    imports: [MatIconModule, MatButtonModule, MatFormFieldModule, MatCardModule, PhoneNumberPipe, HoverShadowDirective],
+    imports:  [MatIconModule, MatButtonModule, MatFormFieldModule, MatCardModule, PhoneNumberPipe, HoverShadowDirective],
     templateUrl: './user-card.component.html',
     styleUrl: './user-card.component.scss',
     changeDetection: ChangeDetectionStrategy.OnPush
@@ -23,7 +23,7 @@ export class UserCardComponent {
     constructor(public dialog: MatDialog) { }
     private _snackBar = inject(MatSnackBar);
     phone: string = '123-456-7890';
-    
+
     @Input()
     user: any;
 

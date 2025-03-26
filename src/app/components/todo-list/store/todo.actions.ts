@@ -1,5 +1,5 @@
 import { createActionGroup, emptyProps, props } from "@ngrx/store";
-import { Todos } from "../../interface/todos";
+import {Todos} from "../../../interface/todos";
 
 export const TodoActions = createActionGroup({
     source: 'Todos',

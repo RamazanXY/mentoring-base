@@ -1,5 +1,5 @@
 import { createSelector } from "@ngrx/store";
-import { Todos } from "../../interface/todos";
+import {Todos} from "../../../interface/todos";
 
 interface TodoState {
     todos: Todos[];

@@ -1,8 +1,8 @@
-import { CanActivateFn } from '@angular/router';
-import { inject } from '@angular/core';
-import { Router } from '@angular/router';
-import { Store } from '@ngrx/store';
-import { selectIsLoggedIn, selectIsAdmin } from '../user-list/store/users.selectors';
+import {CanActivateFn} from '@angular/router';
+import {inject} from '@angular/core';
+import {Router} from '@angular/router';
+import {Store} from '@ngrx/store';
+import {selectIsAdmin, selectIsLoggedIn} from "../../components/user-list/store/users.selectors";
 
 
 export const authGuard: CanActivateFn = () => {
@@ -15,10 +15,10 @@ export const authGuard: CanActivateFn = () => {
     router.navigate(['']);
     return false;
   }
-   if (isAdmin) {
+  if (isAdmin) {
     return true;
   }
- 
+
   router.navigate(['']);
   return false;
 };

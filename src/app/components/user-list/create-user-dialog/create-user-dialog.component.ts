@@ -6,7 +6,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDialog } from "@angular/material/dialog";
 import { CreateUserForm } from "./create-user-form/create-user-form.component";
-import { User } from "../../interface/users";
+import {User} from "../../../interface/users";
 
 @Component({
     selector: 'app-create-user-dialog',

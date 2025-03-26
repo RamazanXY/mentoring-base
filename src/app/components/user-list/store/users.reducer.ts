@@ -1,6 +1,6 @@
 import { createReducer, on } from "@ngrx/store";
-import { User } from "../../interface/users";
 import { UserActions } from "./user.actions";
+import {User} from "../../../interface/users";
 
 const initialState: { users: User[], currentUser: User | null } = {
     users: [],
@@ -36,9 +36,9 @@ export const userReducer = createReducer(
             isAdmin: true,
             id: new Date().getTime(),
             name: 'Администратор',
-            email: '',
-            website: '',
-            company: { name: '' }
+            email: 'ramazan@gmail.com',
+            website: 'goo.org',
+            company: { name: 'Goo' }
         }
     })),
     on(UserActions.loginAsUser, (state) => ({

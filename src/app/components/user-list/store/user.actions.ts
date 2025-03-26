@@ -1,5 +1,6 @@
 import { createActionGroup, emptyProps, props } from "@ngrx/store";
-import { User } from "../../interface/users";
+import {User} from "../../../interface/users";
+
 
 export const UserActions = createActionGroup({
     source: 'Users',
@@ -7,7 +8,7 @@ export const UserActions = createActionGroup({
         'set': props<{ users: User[] }>(),
         'edit': props<{ user: User }>(),
         'create': props<{ user: User }>(),
-        'delete': props<{ id: number }>(),  
+        'delete': props<{ id: number }>(),
         'LoginAsAdmin': emptyProps(),
         'LoginAsUser': emptyProps(),
         'isAdmin': emptyProps(),
