@@ -1,4 +1,4 @@
-import { Component, EventEmitter, inject, Input, Output } from "@angular/core";
+import { Component, EventEmitter, inject, Output } from "@angular/core";
 import { ReactiveFormsModule } from "@angular/forms";
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
@@ -17,7 +17,6 @@ import {User} from "../../../interface/users";
 })
 
 export class CreateUserDialog {
-    @Input()
     user: User | undefined;
 
     @Output()
@@ -26,14 +25,9 @@ export class CreateUserDialog {
     readonly dialog = inject(MatDialog);
 
     createOpenDialog(): void {
-        const dialogRef = this.dialog.open(CreateUserForm, {
-            data: { user: this.user }
-        });
-
-        dialogRef.afterClosed().subscribe(createResult => {
-            if (createResult) {
-                this.createUser.emit(createResult);
-            }
-        })
-    };
+      const dialogRef = this.dialog.open(CreateUserForm);
+      dialogRef.afterClosed().subscribe(createResult => {
+        if (createResult) this.createUser.emit(createResult);
+    });
+  }
 }

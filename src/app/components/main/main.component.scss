@@ -73,7 +73,7 @@
     height: 428px;
     box-sizing: border-box;
     box-shadow: 0px 20px 50px 0px #3C3C3B12;
-    background-image: url('/src/assets/img/build-pro-tools.png');
+    background-image: url('src/assets/img/build-pro-tools.png');
     background-repeat: no-repeat;
     background-position-x: left;
     background-position-y: bottom;
@@ -91,18 +91,18 @@
     line-height: 33.89px;
 }
 
-.grid-card__rigth {
+.grid-card__right {
     display: flex;
     flex-wrap: wrap;
     gap: 28px;
 }
 
-.grid-card__rigth-first-item {
+.grid-card__right-first-item {
     width: 421px;
     height: 200px;
     box-sizing: border-box;
     box-shadow: 0px 20px 50px 0px #3C3C3B12;
-    background-image: url(/src/assets/img/enamel-paint.png);
+    background-image: url(src/assets/img/enamel-paint.png);
     background-repeat: no-repeat;
     background-position-x: left;
     background-position-y: bottom;
@@ -113,12 +113,12 @@
     padding: 16px;
 }
 
-.grid-card__rigth-second-item {
+.grid-card__right-second-item {
     width: 421px;
     height: 200px;
     box-sizing: border-box;
     box-shadow: 0px 20px 50px 0px #3C3C3B12;
-    background-image: url(/src/assets/img/paints-varnishes.png);
+    background-image: url(src/assets/img/paints-varnishes.png);
     background-repeat: no-repeat;
     background-position-x: right;
     background-position-y: bottom;
@@ -129,12 +129,12 @@
     padding: 16px;
 }
 
-.grid-card__rigth-three-item {
+.grid-card__right-three-item {
     width: 421px;
     height: 200px;
     box-sizing: border-box;
     box-shadow: 0px 20px 50px 0px #3C3C3B12;
-    background-image: url(/src/assets/img/balon.png);
+    background-image: url(src/assets/img/balon.png);
     background-repeat: no-repeat;
     background-position-x: right;
     background-position-y: bottom;
@@ -145,12 +145,12 @@
     padding: 16px;
 }
 
-.grid-card__rigth-four-item {
+.grid-card__right-four-item {
     width: 421px;
     height: 200px;
     box-sizing: border-box;
     box-shadow: 0px 20px 50px 0px #3C3C3B12;
-    background-image: url(/src/assets/img/socket.png);
+    background-image: url(src/assets/img/socket.png);
     background-repeat: no-repeat;
     background-position-x: left;
     background-position-y: bottom;
@@ -175,7 +175,7 @@
     align-self: flex-end;
 }
 
-.grig-card__item-catalog-text {
+.grid-card__item-catalog-text {
     font-size: 14px;
     font-weight: 400;
     line-height: 16.94px;
@@ -183,7 +183,7 @@
     margin-right: 10px;
 }
 
-.grid-card-text__rigth {
+.grid-card-text__right {
     display: flex;
     justify-content: right;
     font-size: 28px;
@@ -191,7 +191,7 @@
     line-height: 33.89px;
 }
 
-.grig-card__item-catalog-img {
+.grid-card__item-catalog-img {
     width: 386px;
     height: 386px;
     object-fit: cover;
@@ -225,7 +225,7 @@
     padding: 24px;
 }
 
-.products__items-card-discription {
+.products__items-card-description {
     display: flex;
     flex-wrap: wrap;
 }
@@ -305,7 +305,7 @@
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    background-image: url('/src/assets/img/man-drill.png');
+    background-image: url('src/assets/img/man-drill.png');
     background-repeat: no-repeat;
     background-position-x: right;
     width: 1320px;
@@ -367,7 +367,6 @@
 
 .button-styles:hover {
     background-color: #4B565E;
-    transform: scale(1.1);
 }
 
 .gray--text {

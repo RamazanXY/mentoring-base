@@ -6,10 +6,10 @@
   "devDependencies": {
     "@angular-devkit/build-angular": "^19.2.1",
     "@nrwl/nx-cloud": "^19.1.0",
-    "nx": "^20.5.0"
+    "sass": "^1.86.1"
   },
   "scripts": {
-    "start": "nx serve",
+    "start": "npm run start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -24,13 +24,14 @@
   },
   "homepage": "https://github.com/RamazanXY/mentoring-base#readme",
   "dependencies": {
-    "@angular/cdk": "^19.2.3",
+    "@angular/cdk": "^19.2.8",
     "@angular/common": "^19.2.2",
     "@angular/core": "^19.2.1",
     "@angular/forms": "^19.2.2",
-    "@angular/material": "^19.2.3",
+    "@angular/material": "^19.2.8",
     "@angular/router": "^19.2.2",
     "@ngrx/effects": "^19.0.1",
-    "@ngrx/store-devtools": "^19.0.1"
+    "@ngrx/store-devtools": "^19.0.1",
+    "@nx/jest": "^20.7.1"
   }
 }

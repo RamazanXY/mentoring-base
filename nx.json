@@ -29,7 +29,7 @@
       "inputs": [
         "default",
         "{workspaceRoot}/.eslintrc.json",
-        "{workspaceRoot}/.eslintignore",
+        "{workspaceRoot}/.eslint ignore",
         "{workspaceRoot}/eslint.config.mjs"
       ]
     }

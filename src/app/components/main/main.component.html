@@ -1,77 +1,79 @@
 <button (click)="isShowImg=!isShowImg" class="button-styles" type="button">Скрыть/Показать картинку</button>
 <div *ngIf="isShowImg" class="background-large">
-    <img style="max-width: 1920px;" src="../../../assets/img/banner.png" alt="man banner">
+  <img style="max-width: 1920px;" src="assets/img/banner.png" alt="man banner">
 </div>
 <div class="advantages container">
+  <div class="advantages-assortment">
     <div class="advantages-assortment">
-        <div class="advantages-assortment">
-            <img class="advantages__img-logo" src="../../../assets/img/assortment.svg" alt="assortment logo">
-            <div class="advantages__description">
+      <img class="advantages__img-logo" src="assets/img/assortment.svg" alt="assortment logo">
+      <div class="advantages__description">
                 <span class="advantages--gray"><span class="advantages--black">Большой
                         ассортимент</span><br>строительных
                     материалов всегда в <br>наличии</span>
-            </div>
-        </div>
-        <div class="advantages-assortment">
-            <img class="advantages__img-logo" src="../../../assets/img/delivery.svg" alt="assortment logo">
-            <div class="advantages__description">
+      </div>
+    </div>
+    <div class="advantages-assortment">
+      <img class="advantages__img-logo" src="assets/img/delivery.svg" alt="assortment logo">
+      <div class="advantages__description">
                 <span class="advantages--gray"><span class="advantages--black">Доставка стройматериалов</span>
                     <br>в течении четырех часов или в<br>любое удобное время</span>
-            </div>
-        </div>
-        <div class="advantages-assortment">
-            <img class="advantages__img-logo" src="../../../assets/img/quality.svg" alt="assortment logo">
-            <div class="advantages__description">
+      </div>
+    </div>
+    <div class="advantages-assortment">
+      <img class="advantages__img-logo" src="assets/img/quality.svg" alt="assortment logo">
+      <div class="advantages__description">
                 <span class="advantages--gray">Многоуровневая <span class="advantages--black">система <br>управления
                         качеством</span> по стандарту <br>ISO 9001</span>
-            </div>
-        </div>
+      </div>
     </div>
-    <div class="advantages-assortment__pagination">
-        <button *ngFor="let item of newPages" class="advantages-assortment__pagination-button active--button" type="button">{{item}}</button>
-    </div>
+  </div>
+  <div class="advantages-assortment__pagination">
+    <button *ngFor="let item of newPages" class="advantages-assortment__pagination-button active--button" type="button">{{item}}</button>
+  </div>
 </div>
+
 <div class="grid-card container">
-    <div class="grid-card__left">
-        <div class="grid-card__left-text">Строительный отделочный инструмент</div>
-        <a class="grid-card__item-catalog-link">
-            <span class="grig-card__item-catalog-text">Перейти в каталог</span>
-            <img src="../../../assets/img/сatalog.svg" alt="сatalog">
-        </a>
+  <div class="grid-card__left">
+    <div class="grid-card__left-text">Строительный отделочный инструмент</div>
+    <a class="grid-card__item-catalog-link">
+      <span class="grid-card__item-catalog-text">Перейти в каталог</span>
+      <img src="assets/img/catalog.svg" alt="Перейти каталог">
+    </a>
+  </div>
+  <div class="grid-card__right">
+    <div class="grid-card__right-first-item">
+      <div class="grid-card__left-text text--end-position">Эмали</div>
+      <a class="grid-card__item-catalog-link">
+        <span class="grid-card__item-catalog-text">Перейти в каталог</span>
+        <img src="assets/img/catalog.svg" alt="Перейти каталог">
+      </a>
     </div>
-    <div class="grid-card__rigth">
-        <div class="grid-card__rigth-first-item">
-            <div class="grid-card__left-text text--end-position">Эмали</div>
-            <a class="grid-card__item-catalog-link">
-                <span class="grig-card__item-catalog-text">Перейти в каталог</span>
-                <img src="../../../assets/img/сatalog.svg" alt="сatalog">
-            </a>
-        </div>
-        <div class="grid-card__rigth-three-item">
-            <div class="grid-card__left-text">Пены, клеи и<br>герметики</div>
-            <a class="grid-card__item-catalog-link link--start-position">
-                <span class="grig-card__item-catalog-text">Перейти в каталог</span>
-                <img src="../../../assets/img/сatalog.svg" alt="сatalog">
-            </a>
-        </div>
+    <div class="grid-card__right-three-item">
+      <div class="grid-card__left-text">Пены, клеи и<br>герметики</div>
+      <a class="grid-card__item-catalog-link link--start-position">
+        <span class="grid-card__item-catalog-text">Перейти в каталог</span>
+        <img src="assets/img/catalog.svg" alt="Перейти каталог">
+      </a>
     </div>
-    <div class="grid-card__rigth">
-        <div class="grid-card__rigth-second-item">
-            <div class="grid-card__left-text">Лакокрасочные<br>материалы</div>
-            <a class="grid-card__item-catalog-link link--start-position">
-                <span class="grig-card__item-catalog-text">Перейти в каталог</span>
-                <img src="../../../assets/img/сatalog.svg" alt="сatalog">
-            </a>
-        </div>
-        <div class="grid-card__rigth-four-item">
-            <div class="grid-card__left-text">Розетки и выключатели</div>
-            <a class="grid-card__item-catalog-link">
-                <span class="grig-card__item-catalog-text">Перейти в каталог</span>
-                <img src="../../../assets/img/сatalog.svg" alt="сatalog">
-            </a>
-        </div>
+  </div>
+  <div class="grid-card__right">
+    <div class="grid-card__right-second-item">
+      <div class="grid-card__left-text">Лакокрасочные<br>материалы</div>
+      <a class="grid-card__item-catalog-link link--start-position">
+        <span class="grid-card__item-catalog-text">Перейти в каталог</span>
+        <img src="assets/img/catalog.svg" alt="Перейти каталог">
+      </a>
     </div>
+    <div class="grid-card__right-four-item">
+      <div class="grid-card__left-text">Розетки и выключатели</div>
+      <a class="grid-card__item-catalog-link">
+        <span class="grid-card__item-catalog-text">Перейти в каталог</span>
+        <img src="assets/img/catalog.svg" alt="Перейти каталог">
+      </a>
+    </div>
+  </div>
 </div>
+
 <div class="products container">
     <div class="products-header products-header__item">
         <div class="products-header-category">Популярные товары</div>
@@ -79,18 +81,18 @@
     </div>
     <div class="products__items">
         <button class="clear-styles-button next-slider--top" type="button">
-            <img class="next-slider" src="../../../assets/img/next-slider.png" alt="">
+            <img class="next-slider" src="assets/img/next-slider.png" alt="">
         </button>
         <div class="products__items-card">
             <div class="products__items-card-img">
                 <div class="products__items-card-img-logos">
-                    <img style="z-index: 1;" src="../../../assets/img/sales.svg" alt="sales">
-                    <img style="width: 20.9px; z-index: 1;" src="../../../assets/img/love-logo-black.svg"
+                    <img style="z-index: 1;" src="assets/img/sales.svg" alt="sales">
+                    <img style="width: 20.9px; z-index: 1;" src="assets/img/love-logo-black.svg"
                         alt="love logo black">
                 </div>
-                <img style="margin-top: -38px;" src="../../../assets/img/swarming-disk.png" alt="">
+                <img style="margin-top: -38px;" src="assets/img/swarming-disk.png" alt="">
             </div>
-            <div class="products__items-card-discription">
+            <div class="products__items-card-description">
                 <span class="products__items-card--big-text">Круг зачистной 125х6х22</span>
                 <span class="products__items-card--small-text">Артикул 00004</span>
             </div>
@@ -117,13 +119,13 @@
         <div class="products__items-card">
             <div class="products__items-card-img">
                 <div class="products__items-card-img-logos">
-                    <img style="z-index: 1;" src="../../../assets/img/sales.svg" alt="sales">
-                    <img style="width: 20.9px; z-index: 1;" src="../../../assets/img/love-logo-black.svg"
+                    <img style="z-index: 1;" src="assets/img/sales.svg" alt="sales">
+                    <img style="width: 20.9px; z-index: 1;" src="assets/img/love-logo-black.svg"
                         alt="love logo black">
                 </div>
-                <img style="margin-top: -38px;" src="../../../assets/img/swarming-disk.png" alt="">
+                <img style="margin-top: -38px;" src="assets/img/swarming-disk.png" alt="">
             </div>
-            <div class="products__items-card-discription">
+            <div class="products__items-card-description">
                 <span class="products__items-card--big-text">Круг зачистной 125х6х22</span>
                 <span class="products__items-card--small-text">Артикул 00004</span>
             </div>
@@ -150,14 +152,14 @@
         <div class="products__items-card">
             <div class="products__items-card-img">
                 <div class="products__items-card-img-logos">
-                    <img style="z-index: 1;" src="../../../assets/img/new-items.svg" alt="new items">
-                    <img class="sales--logo" src="../../../assets/img/sales.svg" alt="sales">
-                    <img style="width: 20.9px; z-index: 1;" src="../../../assets/img/love-logo-black.svg"
+                    <img style="z-index: 1;" src="assets/img/new-items.svg" alt="new items">
+                    <img class="sales--logo" src="assets/img/sales.svg" alt="sales">
+                    <img style="width: 20.9px; z-index: 1;" src="assets/img/love-logo-black.svg"
                         alt="love logo black">
                 </div>
-                <img style="margin-top: -38px;" src="../../../assets/img/swarming-disk.png" alt="">
+                <img style="margin-top: -38px;" src="assets/img/swarming-disk.png" alt="">
             </div>
-            <div class="products__items-card-discription">
+            <div class="products__items-card-description">
                 <span class="products__items-card--big-text">Круг зачистной 125х6х22</span>
                 <span class="products__items-card--small-text">Артикул 00004</span>
             </div>
@@ -184,13 +186,13 @@
         <div class="products__items-card">
             <div class="products__items-card-img">
                 <div class="products__items-card-img-logos">
-                    <img style="z-index: 1;" src="../../../assets/img/new-items.svg" alt="new items">
-                    <img style="width: 20.9px; z-index: 1;" src="../../../assets/img/love-logo-black.svg"
+                    <img style="z-index: 1;" src="assets/img/new-items.svg" alt="new items">
+                    <img style="width: 20.9px; z-index: 1;" src="assets/img/love-logo-black.svg"
                         alt="love logo black">
                 </div>
-                <img style="margin-top: -38px;" src="../../../assets/img/swarming-disk.png" alt="">
+                <img style="margin-top: -38px;" src="assets/img/swarming-disk.png" alt="">
             </div>
-            <div class="products__items-card-discription">
+            <div class="products__items-card-description">
                 <span class="products__items-card--big-text">Круг зачистной 125х6х22</span>
                 <span class="products__items-card--small-text">Артикул 00004</span>
             </div>
@@ -215,7 +217,7 @@
             </div>
         </div>
         <button class="clear-styles-button" style="transform: rotate(180deg);" type="button">
-            <img class="next-slider" src="../../../assets/img/next-slider.png" alt="">
+            <img class="next-slider" src="assets/img/next-slider.png" alt="">
         </button>
     </div>
 </div>
@@ -233,18 +235,18 @@
     </div>
     <div class="products__items">
         <button class="clear-styles-button next-slider--top" type="button">
-            <img class="next-slider" src="../../../assets/img/next-slider.png" alt="">
+            <img class="next-slider" src="assets/img/next-slider.png" alt="">
         </button>
         <div class="products__items-card">
             <div class="products__items-card-img">
                 <div class="products__items-card-img-logos">
-                    <img style="z-index: 1;" src="../../../assets/img/new-items.svg" alt="new items">
-                    <img style="width: 20.9px; z-index: 1;" src="../../../assets/img/love-logo-black.svg"
+                    <img style="z-index: 1;" src="assets/img/new-items.svg" alt="new items">
+                    <img style="width: 20.9px; z-index: 1;" src="assets/img/love-logo-black.svg"
                         alt="love logo black">
                 </div>
-                <img style="margin-top: -38px;" src="../../../assets/img/swarming-disk.png" alt="">
+                <img style="margin-top: -38px;" src="assets/img/swarming-disk.png" alt="">
             </div>
-            <div class="products__items-card-discription">
+            <div class="products__items-card-description">
                 <span class="products__items-card--big-text">Круг зачистной 125х6х22</span>
                 <span class="products__items-card--small-text">Артикул 00004</span>
             </div>
@@ -271,13 +273,13 @@
         <div class="products__items-card">
             <div class="products__items-card-img">
                 <div class="products__items-card-img-logos">
-                    <img style="z-index: 1;" src="../../../assets/img/new-items.svg" alt="new items">
-                    <img style="width: 20.9px; z-index: 1;" src="../../../assets/img/love-logo-black.svg"
+                    <img style="z-index: 1;" src="assets/img/new-items.svg" alt="new items">
+                    <img style="width: 20.9px; z-index: 1;" src="assets/img/love-logo-black.svg"
                         alt="love logo black">
                 </div>
-                <img style="margin-top: -38px;" src="../../../assets/img/swarming-disk.png" alt="">
+                <img style="margin-top: -38px;" src="assets/img/swarming-disk.png" alt="">
             </div>
-            <div class="products__items-card-discription">
+            <div class="products__items-card-description">
                 <span class="products__items-card--big-text">Круг зачистной 125х6х22</span>
                 <span class="products__items-card--small-text">Артикул 00004</span>
             </div>
@@ -304,13 +306,13 @@
         <div class="products__items-card">
             <div class="products__items-card-img">
                 <div class="products__items-card-img-logos">
-                    <img style="z-index: 1;" src="../../../assets/img/new-items.svg" alt="new items">
-                    <img style="width: 20.9px; z-index: 1;" src="../../../assets/img/love-logo-black.svg"
+                    <img style="z-index: 1;" src="assets/img/new-items.svg" alt="new items">
+                    <img style="width: 20.9px; z-index: 1;" src="assets/img/love-logo-black.svg"
                         alt="love logo black">
                 </div>
-                <img style="margin-top: -38px;" src="../../../assets/img/swarming-disk.png" alt="">
+                <img style="margin-top: -38px;" src="assets/img/swarming-disk.png" alt="">
             </div>
-            <div class="products__items-card-discription">
+            <div class="products__items-card-description">
                 <span class="products__items-card--big-text">Круг зачистной 125х6х22</span>
                 <span class="products__items-card--small-text">Артикул 00004</span>
             </div>
@@ -334,16 +336,17 @@
                 <button class="products__items-card-basket-button" type="button">В корзину</button>
             </div>
         </div>
+
         <div class="products__items-card">
             <div class="products__items-card-img">
                 <div class="products__items-card-img-logos">
-                    <img style="z-index: 1;" src="../../../assets/img/new-items.svg" alt="new items">
-                    <img style="width: 20.9px; z-index: 1;" src="../../../assets/img/love-logo-black.svg"
+                    <img style="z-index: 1;" src="assets/img/new-items.svg" alt="new items">
+                    <img style="width: 20.9px; z-index: 1;" src="assets/img/love-logo-black.svg"
                         alt="love logo black">
                 </div>
-                <img style="margin-top: -38px;" src="../../../assets/img/swarming-disk.png" alt="">
+                <img style="margin-top: -38px;" src="assets/img/swarming-disk.png" alt="">
             </div>
-            <div class="products__items-card-discription">
+            <div class="products__items-card-description">
                 <span class="products__items-card--big-text">Круг зачистной 125х6х22</span>
                 <span class="products__items-card--small-text">Артикул 00004</span>
             </div>
@@ -368,7 +371,7 @@
             </div>
         </div>
         <button class="clear-styles-button" style="transform: rotate(180deg);" type="button">
-            <img class="next-slider" src="../../../assets/img/next-slider.png" alt="">
+            <img class="next-slider" src="assets/img/next-slider.png" alt="">
         </button>
     </div>
 </div>

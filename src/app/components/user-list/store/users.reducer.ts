@@ -7,6 +7,10 @@ const initialState: { users: User[], currentUser: User | null } = {
     currentUser: null
 };
 
+// @ts-ignore
+// @ts-ignore
+// @ts-ignore
+// @ts-ignore
 export const userReducer = createReducer(
     initialState,
     on(UserActions.set, (state, payload) => {
@@ -30,30 +34,36 @@ export const userReducer = createReducer(
        const newState = {...state, users: filtredUsers};
        return newState;
     }),
-    on(UserActions.loginAsAdmin, (state) => ({
-        ...state,
-        currentUser: {
-            isAdmin: true,
-            id: new Date().getTime(),
-            name: 'Администратор',
-            email: 'ramazan@gmail.com',
-            website: 'goo.org',
-            company: { name: 'Goo' }
-        }
-    })),
-    on(UserActions.loginAsUser, (state) => ({
-        ...state,
-        currentUser: {
-            isAdmin: false,
-            id: new Date().getTime(),
-            name: 'Пользователь',
-            email: '',
-            website: '',
-            company: { name: '' }
-        }
-    })),
-    on(UserActions.logout, (state) => ({
-        ...state,
-        currentUser: null
-    })),
+  on(UserActions.loginAsAdmin, (state) => {
+    const currentUser = {
+      isAdmin: true,
+      id: new Date().getTime(),
+      name: 'Администратор',
+      email: 'ramazan@gmail.com',
+      website: 'goo.org',
+      company: { name: 'Goo' }
+    };
+    localStorage.setItem('currentUser', JSON.stringify(currentUser));
+    return { ...state, currentUser };
+  }),
+  on(UserActions.loginAsUser, (state) => {
+    const currentUser = {
+      isAdmin: false,
+      id: new Date().getTime(),
+      name: 'Пользователь',
+      email: '',
+      website: '',
+      company: { name: '' }
+    };
+    localStorage.setItem('currentUser', JSON.stringify(currentUser));
+    return { ...state, currentUser };
+  }),
+  on(UserActions.logout, (state) => {
+    localStorage.removeItem('currentUser');
+    return { ...state, currentUser: null };
+  }),
+  on(UserActions.restoreUser, (state, { user }) => ({
+    ...state,
+    currentUser: user
+  })),
 );

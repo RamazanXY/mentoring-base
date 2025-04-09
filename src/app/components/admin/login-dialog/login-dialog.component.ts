@@ -4,11 +4,12 @@ import { MatButtonModule } from '@angular/material/button';
 import { Router } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { UserActions } from '../../user-list/store/user.actions';
+import {MatIconModule} from "@angular/material/icon";
 
 @Component({
   selector: 'app-login-dialog',
   standalone: true,
-  imports: [MatButtonModule],
+  imports: [MatButtonModule, MatIconModule],
   templateUrl: './login-dialog.component.html',
   styleUrls: ['./login-dialog.component.scss']
 })

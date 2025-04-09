@@ -38,7 +38,7 @@
 }
 
 .header-navigation-item:last-child {
-    margin-right: 0px;
+    margin-right: 0;
 }
 
 .header__phone {
@@ -89,6 +89,13 @@
   border: 1px solid #F0BA4E;
 }
 
+.header--styles-text-button-low {
+  color: #FFFFFF!important;
+  background-color: #3C3C3B;
+  margin-inline: 5px;
+}
+
+
 .header__lower {
     height: 48px;
     display: flex;
@@ -132,7 +139,7 @@
     width: 400px;
     height: 28px;
     padding: 0 10px;
-    font-weight: 400px;
+    font-weight: 400;
     color: #4B565E;
 
     &:focus {
@@ -140,10 +147,6 @@
     }
 
     &::-webkit-search-cancel-button {
-        display: none;
-    }
-
-    &::-moz-search-cancel-button {
         display: none;
     }
 }

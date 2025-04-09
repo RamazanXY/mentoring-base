@@ -1,4 +1,19 @@
-/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+
+html {
+  @include mat.theme((
+    color: (
+      theme-type: light,
+      primary: mat.$azure-palette,
+      tertiary: mat.$blue-palette,
+    ),
+    typography: Roboto,
+    density: 0,
+  ));
+}/*! normalize.css v8.0.1 | MIT License | github.com/colas/normalize.css */
 
 /* Document
    ========================================================================== */
@@ -85,7 +100,6 @@ a {
 abbr[title] {
   border-bottom: none; /* 1 */
   text-decoration: underline; /* 2 */
-  text-decoration: underline dotted; /* 2 */
 }
 
 /**
@@ -349,3 +363,87 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mat-button, .mat-raised-button {
+  color: #F0BA4E !important; /* Фиолетовый цвет */
+}
+
+.mat-icon {
+  color: #F0BA4E !important; /* Розовый цвет */
+}
+
+.mat-input-element {
+  color: #F0BA4E !important; /* Бирюзовый цвет */
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+  100% { transform: scale(1); }
+}
+
+.silver-yellow-theme .mat-dialog-container {
+  animation: pulse 0.5s ease;
+}
+
+@media (max-width: 600px) {
+  .mat-dialog-content {
+    padding: 16px !important;
+  }
+
+  .mat-raised-button {
+    padding: 8px 12px !important;
+  }
+}
+
+.custom-dialog-container {
+  border-radius: 0 !important;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3) !important;
+  overflow: hidden !important;
+
+  .mat-dialog-container {
+    padding: 0 !important;
+    overflow: hidden !important;
+  }
+
+  .mat-dialog-title {
+    background-color: #3f51b5;
+    color: white;
+    margin: 0;
+    padding: 16px 24px;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  .mat-dialog-content {
+    padding: 24px !important;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background: #f5f5f5;
+  }
+
+  .mat-dialog-actions {
+    padding: 8px 24px 16px !important;
+    margin: 0;
+    justify-content: flex-end;
+    background: #f5f5f5;
+  }
+}
+
+/* Добавьте в styles.scss */
+.cdk-overlay-container .custom-dialog-container {
+  animation: dialog-enter 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+@keyframes dialog-enter {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
