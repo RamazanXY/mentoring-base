@@ -1,0 +1,10 @@
+<div class="submit">
+    <h2 class="submit-title" mat-dialog-title>Подтверждение</h2>
+    <mat-dialog-content class="submit-title">
+        {{ data.message }}
+    </mat-dialog-content>
+    <mat-dialog-actions class="submit-button">
+        <button mat-button (click)="onYesClick()" cdkFocusInitial>Да</button>
+        <button mat-button (click)="onNoClick()">Нет</button>
+    </mat-dialog-actions>
+</div>

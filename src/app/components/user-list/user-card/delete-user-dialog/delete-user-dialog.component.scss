@@ -1,0 +1,17 @@
+.submit {
+    padding: 20px;   
+    width: 470px;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.submit-title {
+    text-align: center;
+}
+
+.submit-button {
+    display: flex;
+    justify-content: space-between;
+}

@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="create-user">
+        <app-create-user-dialog (createUser)="createUser($event)"></app-create-user-dialog>
+    </div>
+    <div class="card">
+        <div *ngFor="let item of users$ | async">
+            <app-user-card [user]="item"
+            (deleteUser)="deleteUser($event)"
+            (editUser)="editUser($event)"></app-user-card>
+        </div>
+    </div>
+</div>

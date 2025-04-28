@@ -1,0 +1,21 @@
+.create {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    padding: 20px;
+}
+
+.create-title {
+    text-align: center;
+}
+
+.create-user-form {
+    width: 300px;
+}
+
+.form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}

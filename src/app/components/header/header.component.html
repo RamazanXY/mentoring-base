@@ -1,0 +1,73 @@
+<header class="header">
+  <div class="header-width-gray">
+    <div class="container">
+      <div class="header__upper">
+        <div class="left-block">
+          <nav class="header-navigation-button">
+            <button mat-button (click)="openLoginDialog()" class="header--styles-text-button">
+              {{ getButtonText((currentUser$ | async)) }}
+            </button>
+          </nav>
+          <button routerLink="/todos" class="button-styles-forms" type="button">Задачки</button>
+          <img style="margin-right: 20px;" class="company-logo" ngSrc="assets/img/company-logo.svg"
+               alt="company-logo" height="40" width="61">
+          <nav class="header-navigation">
+            <div routerLink="" class="header-navigation-item">{{ headerItem1 }}</div>
+            <div class="header-navigation-item">{{ aboutCompany }}</div>
+            <div *ngIf="isShowCatalog" class="header-navigation-item">{{ headerItem2 }}</div>
+            <button (click)="isShowCatalog=!isShowCatalog" mat-button class="header--styles-text-button"
+                    type="button">Скрыть/Показать
+            </button>
+          </nav>
+        </div>
+        <div class="right-block">
+          <div class="header__phone">
+            <img class="header__phone-item" ngSrc="assets/img/white-phone.svg" alt="white-phone" height="28" width="28">
+            <span class="header--styles-text">+7 (965) 084-29-29</span>
+          </div>
+          <img class="header__love-logo" ngSrc="assets/img/love-logo.svg" alt="love logo" height="21" width="24">
+          <span class="header--styles-text">{{ today | date:'small' }}</span>
+          <div class="header__basket">
+            <button yellow class="header__basket-button" type="button">
+              <img class="header__basket-button-logo" ngSrc="assets/img/basket-logo.svg"
+                   alt="basket logo" height="28" width="28">
+              <span class="header--styles-text">Пусто</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="header-width-yellow">
+    <div class="container">
+      <div class="header__lower">
+        <div class="left-block">
+          <div class="light-logo">
+            <img ngSrc="assets/img/light-logo.svg" alt="light logo" height="24" width="16">
+          </div>
+          <nav class="header__menu-nav">
+            <span *ngFor="let item of menuItems"
+                  class="header__menu-nav-item header__menu-nav--item-left">{{ item }}</span>
+          </nav>
+          <button (click)="ChangeMenuText()" mat-button class="header--styles-text-button-low"
+                  type="button">Изменить регистр
+          </button>
+        </div>
+        <div class="right-block">
+          <div class="header__input-search">
+            <input class="header__input-search-item" type="search"
+                   placeholder="Поиск, например Круг зачистной">
+            <button class="header__input-search-button" type="button">
+              <img class="header__input-search-button-logo" ngSrc="assets/img/magnifier.svg" alt="search" height="24"
+                   width="24">
+            </button>
+          </div>
+          <div class="header__map">
+            <img class="header__map-logo" ngSrc="assets/img/map-pin.svg" alt="map pin" height="12" width="12">
+            <span class="header__map-item">Москва</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

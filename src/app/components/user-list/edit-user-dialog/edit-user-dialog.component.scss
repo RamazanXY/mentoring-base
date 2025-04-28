@@ -1,0 +1,21 @@
+.edit {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    padding: 20px;
+}
+
+.edit-title {
+    text-align: center;
+}
+
+.edit-user-form {
+    width: 300px;
+}
+
+.form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}

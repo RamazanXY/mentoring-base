@@ -1,0 +1,24 @@
+<h2 mat-dialog-title>Вход в систему</h2>
+<div mat-dialog-content>
+  <button mat-raised-button
+          color="primary"
+          (click)="loginAsAdmin()"
+          class="full-width-btn">
+    <mat-icon>admin_panel_settings</mat-icon>
+    Администратор
+  </button>
+
+  <button mat-raised-button
+          color="accent"
+          (click)="loginAsUser()"
+          class="full-width-btn">
+    <mat-icon>person</mat-icon>
+    Пользователь
+  </button>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="logout()">
+    <mat-icon>exit_to_app</mat-icon>
+    Выйти
+  </button>
+</div>
